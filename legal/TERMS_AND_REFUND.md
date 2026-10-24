@@ -1,4 +1,4 @@
-# Linda Probe 1.4.4 — Terms and refund / Условия и возврат / Warunki i zwroty
+# Linda Probe 1.4.5 — Terms and refund / Условия и возврат / Warunki i zwroty
 
 Date / Дата / Data: 25 October 2026
 

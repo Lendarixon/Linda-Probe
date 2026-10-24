@@ -1,4 +1,4 @@
-# Linda Probe 1.4.4 — Privacy policy / Политика конфиденциальности / Polityka prywatności
+# Linda Probe 1.4.5 — Privacy policy / Политика конфиденциальности / Polityka prywatności
 
 Date / Дата / Data: 25 October 2026
 
@@ -10,7 +10,7 @@ The controller is Vladyslav Manzyuk, Poland, operator of Linda Probe. For questi
 
 ### Data, purposes and legal bases
 
-- **Local files:** search, indexing and OCR run locally on your device, except for the optional cloud OCR described below. Your documents are not sent to the operator. You choose which files the app can access.
+- **Local files:** search, indexing and OCR run locally on your device. Your documents are not sent to the operator. You choose which files the app can access.
 - **Purchased licences:** activation and validation send your licence key and a Probe-specific hashed machine ID to Polar to administer your licence and device allowance. The hash is a device identifier, not anonymous data. The legal basis is performance of the licence contract (GDPR Article 6(1)(b)). The local activation cache is protected by Windows DPAPI. Use **Remove key** while online to release an activation before uninstalling; uninstalling alone does not release it.
 - **Payments and orders:** Polar is the Merchant of Record and processes payment and tax data under its own privacy policy, available through its checkout/customer portal. We receive order information from Polar needed for licence administration and support. Our legal bases are performance of the contract (Article 6(1)(b)) and applicable legal and accounting obligations (Article 6(1)(c)).
 - **Support and refunds:** we process the information you send to lindapro.support@proton.me to handle your request and perform the contract (Article 6(1)(b)), comply with legal obligations (Article 6(1)(c)), and pursue our legitimate interests in providing support and maintaining security (Article 6(1)(f)). Please do not send unnecessary documents or credentials.
@@ -18,13 +18,13 @@ The controller is Vladyslav Manzyuk, Poland, operator of Linda Probe. For questi
 
 ### Optional cloud features, recipients and transfers
 
-Google Gemini cloud OCR is off by default. It is enabled only when you set `LOCALDOCS_OCR_CLOUD=1` and provide your own API key (`GEMINI_API_KEY`; `GOOGLE_API_KEY` is also accepted). When used, page images are sent to Google at `generativelanguage.googleapis.com` under your own Google account and Google's terms and privacy arrangements. This is an exception to local OCR. Recognition results are cached locally in the temporary folder (`ld_gemini_ocr`). You can disable cloud OCR by removing the setting or setting it to `0`.
+Linda Probe does not send your documents or images to any cloud service; all search, OCR and AI features run on your device. Linda OCR is the author's own model. Optional AI models are downloaded after activation from Hugging Face (huggingface.co), which sees your IP address like any web download.
 
 Polar receives the licensing data described above and processes payments under its own privacy policy. Support correspondence passes through the email service used for lindapro.support@proton.me. Optional AI models are downloaded after activation from Hugging Face (huggingface.co), the host specified by the selected model's download URL in the model catalogue. The download host sees your IP address, as with any download. For Google's and Polar's processing, including international transfers, consult the privacy terms applicable to your account or transaction.
 
 ### Retention
 
-Your documents, indexes and local caches remain on your device under your control. Cloud OCR results are cached in the local temporary folder. We keep support/refund correspondence and licence/order records for as long as needed to handle your request, perform the contract, and meet applicable statutory limitation periods and accounting obligations. Polar's retention is governed by its own privacy policy.
+Your documents, indexes and local caches remain on your device under your control. We keep support/refund correspondence and licence/order records for as long as needed to handle your request, perform the contract, and meet applicable statutory limitation periods and accounting obligations. Polar's retention is governed by its own privacy policy.
 
 ### Your rights and complaints
 
@@ -42,7 +42,7 @@ The app does not collect usage statistics and contains no telemetry, analytics o
 
 ### Данные, цели и правовые основания
 
-- **Локальные файлы:** поиск, индексирование и OCR выполняются локально на вашем устройстве, кроме необязательного облачного OCR, описанного ниже. Ваши документы не отправляются оператору. Вы выбираете файлы, к которым приложение имеет доступ.
+- **Локальные файлы:** поиск, индексирование и OCR выполняются локально на вашем устройстве. Ваши документы не отправляются оператору. Вы выбираете файлы, к которым приложение имеет доступ.
 - **Покупные лицензии:** при активации и проверке в Polar передаются ключ лицензии и хешированный идентификатор компьютера, специфичный для Probe, для управления лицензией и числом устройств. Хеш является идентификатором устройства, а не анонимными данными. Основание — исполнение лицензионного договора, статья 6(1)(b) GDPR. Локальный кеш активации защищён Windows DPAPI. Перед удалением программы используйте **Remove key** при подключении к интернету для освобождения активации; само удаление её не освобождает.
 - **Платежи и заказы:** Polar является Merchant of Record и обрабатывает платёжные и налоговые данные по своей политике конфиденциальности, доступной при оплате и в клиентском портале. Мы получаем от Polar сведения о заказе, необходимые для управления лицензией и поддержки. Наши основания — исполнение договора, статья 6(1)(b), и применимые правовые обязанности, включая бухгалтерский учёт, статья 6(1)(c).
 - **Поддержка и возвраты:** мы обрабатываем сведения, которые вы отправляете на lindapro.support@proton.me, для решения обращения и исполнения договора, статья 6(1)(b), выполнения правовых обязанностей, статья 6(1)(c), и в законных интересах оказания поддержки и обеспечения безопасности, статья 6(1)(f). Не отправляйте ненужные документы или учётные данные.
@@ -50,13 +50,13 @@ The app does not collect usage statistics and contains no telemetry, analytics o
 
 ### Облако, получатели и международные передачи
 
-Облачный OCR Google Gemini выключен по умолчанию. Он включается только при установке `LOCALDOCS_OCR_CLOUD=1` и предоставлении собственного API-ключа (`GEMINI_API_KEY`; также принимается `GOOGLE_API_KEY`). При его использовании изображения страниц отправляются Google на `generativelanguage.googleapis.com` в рамках вашего собственного аккаунта Google и применимых условий Google и правил конфиденциальности. Это исключение из локального OCR. Результаты распознавания кешируются локально во временной папке (`ld_gemini_ocr`). Для отключения облачного OCR удалите настройку или установите её в `0`.
+Linda Probe не отправляет ваши документы и изображения ни в какие облачные сервисы; поиск, OCR и ИИ-функции работают на вашем устройстве. Linda OCR — собственная модель автора. Необязательные ИИ-модели скачиваются после активации с Hugging Face (huggingface.co), который видит ваш IP-адрес, как при любой загрузке из интернета.
 
 Polar получает указанные данные лицензирования и обрабатывает платежи по собственной политике. Переписка поддержки проходит через почтовый сервис адреса lindapro.support@proton.me. Необязательные ИИ-модели загружаются после активации с хоста, указанного в адресе загрузки выбранной модели в каталоге моделей. Хост загрузки видит ваш IP-адрес, как при любой загрузке. Правила обработки Google и Polar, включая международные передачи, изложены в условиях конфиденциальности, применимых к вашему аккаунту или операции.
 
 ### Хранение
 
-Ваши документы, индексы и локальные кеши остаются на вашем устройстве под вашим контролем. Результаты облачного OCR кешируются в локальной временной папке. Мы храним переписку по поддержке и возвратам, а также лицензионные сведения и сведения о заказах столько, сколько необходимо для решения обращения, исполнения договора, соблюдения применимых сроков исковой давности и обязанностей бухгалтерского учёта. Хранение данных Polar регулируется его собственной политикой.
+Ваши документы, индексы и локальные кеши остаются на вашем устройстве под вашим контролем. Мы храним переписку по поддержке и возвратам, а также лицензионные сведения и сведения о заказах столько, сколько необходимо для решения обращения, исполнения договора, соблюдения применимых сроков исковой давности и обязанностей бухгалтерского учёта. Хранение данных Polar регулируется его собственной политикой.
 
 ### Права и жалобы
 
@@ -74,7 +74,7 @@ Administratorem danych osobowych jest Vladyslav Manzyuk, Polska, operator Linda 
 
 ### Dane, cele i podstawy prawne
 
-- **Pliki lokalne:** wyszukiwanie, indeksowanie i OCR działają lokalnie na urządzeniu, z wyjątkiem opcjonalnego OCR w chmurze opisanego poniżej. Twoje dokumenty nie są przesyłane operatorowi. Wybierasz pliki, do których aplikacja ma dostęp.
+- **Pliki lokalne:** wyszukiwanie, indeksowanie i OCR działają lokalnie na urządzeniu. Twoje dokumenty nie są przesyłane operatorowi. Wybierasz pliki, do których aplikacja ma dostęp.
 - **Zakupione licencje:** aktywacja i weryfikacja przesyłają do Polar klucz licencji i zahaszowany identyfikator komputera właściwy dla Probe w celu obsługi licencji oraz limitu urządzeń. Skrót jest identyfikatorem urządzenia, a nie danymi anonimowymi. Podstawą jest wykonanie umowy licencyjnej, art. 6 ust. 1 lit. b RODO. Lokalną pamięć aktywacji chroni Windows DPAPI. Przed odinstalowaniem wybierz **Remove key** przy połączeniu z internetem, aby zwolnić aktywację; samo odinstalowanie jej nie zwalnia.
 - **Płatności i zamówienia:** Polar działa jako Merchant of Record i przetwarza dane płatnicze oraz podatkowe według własnej polityki prywatności dostępnej przy płatności i w portalu klienta. Otrzymujemy od Polar informacje o zamówieniu potrzebne do obsługi licencji i wsparcia. Naszymi podstawami są wykonanie umowy, art. 6 ust. 1 lit. b, oraz właściwe obowiązki prawne, w tym księgowe, art. 6 ust. 1 lit. c.
 - **Wsparcie i zwroty:** przetwarzamy informacje przesłane na lindapro.support@proton.me w celu obsługi zgłoszenia i wykonania umowy, art. 6 ust. 1 lit. b, realizacji obowiązków prawnych, art. 6 ust. 1 lit. c, oraz w uzasadnionym interesie zapewnienia wsparcia i bezpieczeństwa, art. 6 ust. 1 lit. f. Nie przesyłaj zbędnych dokumentów ani danych dostępowych.
@@ -82,13 +82,13 @@ Administratorem danych osobowych jest Vladyslav Manzyuk, Polska, operator Linda 
 
 ### Chmura, odbiorcy i transfery międzynarodowe
 
-OCR Google Gemini w chmurze jest domyślnie wyłączony. Włącza się go wyłącznie przez ustawienie `LOCALDOCS_OCR_CLOUD=1` i podanie własnego klucza API (`GEMINI_API_KEY`; akceptowany jest również `GOOGLE_API_KEY`). Podczas korzystania z tej funkcji obrazy stron są przesyłane do Google pod adresem `generativelanguage.googleapis.com` w ramach własnego konta Google użytkownika oraz właściwych warunków i zasad prywatności Google. Jest to wyjątek od lokalnego OCR. Wyniki rozpoznawania są zapisywane lokalnie w folderze tymczasowym (`ld_gemini_ocr`). Aby wyłączyć OCR w chmurze, usuń ustawienie lub ustaw je na `0`.
+Linda Probe nie wysyła Twoich dokumentów ani obrazów do żadnej usługi w chmurze; wyszukiwanie, OCR i funkcje AI działają na Twoim urządzeniu. Linda OCR to własny model autora. Opcjonalne modele AI są pobierane po aktywacji z Hugging Face (huggingface.co), który widzi Twój adres IP jak przy każdym pobieraniu z internetu.
 
 Polar otrzymuje wskazane dane licencyjne i przetwarza płatności według własnej polityki. Korespondencja wsparcia przechodzi przez usługę pocztową adresu lindapro.support@proton.me. Opcjonalne modele AI są pobierane po aktywacji z hosta wskazanego w adresie pobierania wybranego modelu w katalogu modeli. Host pobierania widzi Twój adres IP, jak przy każdym pobieraniu. Zasady przetwarzania przez Google i Polar, w tym transferów międzynarodowych, określają warunki prywatności właściwe dla Twojego konta lub transakcji.
 
 ### Przechowywanie
 
-Twoje dokumenty, indeksy i lokalna pamięć podręczna pozostają na Twoim urządzeniu pod Twoją kontrolą. Wyniki OCR w chmurze są zapisywane w lokalnym folderze tymczasowym. Korespondencję dotyczącą wsparcia i zwrotów oraz dane licencji i zamówień przechowujemy tak długo, jak jest to potrzebne do obsługi zgłoszenia, wykonania umowy oraz spełnienia wymogów dotyczących ustawowych terminów przedawnienia i obowiązków księgowych. Przechowywanie danych przez Polar reguluje jego własna polityka prywatności.
+Twoje dokumenty, indeksy i lokalna pamięć podręczna pozostają na Twoim urządzeniu pod Twoją kontrolą. Korespondencję dotyczącą wsparcia i zwrotów oraz dane licencji i zamówień przechowujemy tak długo, jak jest to potrzebne do obsługi zgłoszenia, wykonania umowy oraz spełnienia wymogów dotyczących ustawowych terminów przedawnienia i obowiązków księgowych. Przechowywanie danych przez Polar reguluje jego własna polityka prywatności.
 
 ### Prawa i skargi
 

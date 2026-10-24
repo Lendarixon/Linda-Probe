@@ -2,7 +2,7 @@
 
 ![Linda Probe logo](images/logo.png)
 
-# Linda Probe 1.4.4
+# Linda Probe 1.4.5
 
 <a id="en"></a>
 ## EN — English
@@ -38,9 +38,9 @@ Polar is the Merchant of Record. Tax and the final total are shown before paymen
 
 ### Download and installation
 
-[Download Linda Probe 1.4.4 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.4/LindaProbe-Setup-1.4.4.exe)
+[Download Linda Probe 1.4.5 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
 
-SHA-256: `1581d96e5bfdb4da95d40c53d7e0f6d217e6467197ddb0beb121856af87799ab`
+SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
 
 Download the installer, compare its SHA-256 with the published value, then run it and follow the installer. The installer is not yet code-signed, so Windows SmartScreen may warn. After checking the source and hash, choose **More info -> Run anyway** to continue.
 
@@ -60,7 +60,7 @@ Gift Personal keys are perpetual, signed Ed25519 vouchers verified offline. Ente
 
 ### Privacy
 
-Search, indexing and OCR run locally by default. Documents are not sent to the operator. The app has no telemetry, analytics, usage statistics or crash reporting. Optional Gemini cloud OCR is off by default: enabling it with your own API key sends page images to Google. Purchased-key checks contact Polar; optional model downloads contact their download host, which sees your IP address. See the privacy policy for details.
+Search, indexing and OCR run locally by default. Documents are not sent to the operator. The app has no telemetry, analytics, usage statistics or crash reporting. Documents and images never leave your device for any cloud service. Purchased-key checks contact Polar; optional model downloads contact their download host, which sees your IP address. See the privacy policy for details.
 
 ### Legal and support
 
@@ -104,9 +104,9 @@ Polar — Merchant of Record. Налог и окончательная сумм�
 
 ### Скачать и установить
 
-[Скачать Linda Probe 1.4.4 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.4/LindaProbe-Setup-1.4.4.exe)
+[Скачать Linda Probe 1.4.5 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
 
-SHA-256: `1581d96e5bfdb4da95d40c53d7e0f6d217e6467197ddb0beb121856af87799ab`
+SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
 
 Скачайте установщик, сравните его SHA-256 с опубликованным значением, запустите и следуйте инструкциям. Установщик пока не имеет подписи кода, поэтому Windows SmartScreen может показать предупреждение. После проверки источника и хеша выберите **More info -> Run anyway** («Подробнее -> Выполнить в любом случае»).
 
@@ -126,7 +126,7 @@ Windows 10/11 x64. Необязательные модели смысловог�
 
 ### Конфиденциальность
 
-Поиск, индексация и OCR по умолчанию выполняются локально. Документы не отправляются оператору. В приложении нет телеметрии, аналитики, статистики использования и отправки отчётов о сбоях. Необязательный облачный OCR Gemini выключен по умолчанию: при включении со своим API-ключом изображения страниц отправляются Google. Проверки покупных ключей обращаются к Polar; загрузка моделей — к серверу загрузки, которому виден ваш IP-адрес. Подробности — в политике конфиденциальности.
+Поиск, индексация и OCR по умолчанию выполняются локально. Документы не отправляются оператору. В приложении нет телеметрии, аналитики, статистики использования и отправки отчётов о сбоях. Документы и изображения не отправляются ни в какие облачные сервисы. Проверки покупных ключей обращаются к Polar; загрузка моделей — к серверу загрузки, которому виден ваш IP-адрес. Подробности — в политике конфиденциальности.
 
 ### Правовые документы и поддержка
 
@@ -170,9 +170,9 @@ Polar jest Merchant of Record. Podatek i ostateczna kwota są widoczne przed pł
 
 ### Pobieranie i instalacja
 
-[Pobierz Linda Probe 1.4.4 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.4/LindaProbe-Setup-1.4.4.exe)
+[Pobierz Linda Probe 1.4.5 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
 
-SHA-256: `1581d96e5bfdb4da95d40c53d7e0f6d217e6467197ddb0beb121856af87799ab`
+SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
 
 Pobierz instalator, porównaj jego SHA-256 z opublikowaną wartością, uruchom go i wykonaj instrukcje. Instalator nie ma jeszcze podpisu kodu, więc Windows SmartScreen może wyświetlić ostrzeżenie. Po sprawdzeniu źródła i skrótu wybierz **More info -> Run anyway** („Więcej informacji -> Uruchom mimo to”).
 
@@ -192,7 +192,7 @@ Podarunkowe klucze Personal to bezterminowe vouchery podpisane Ed25519 i weryfik
 
 ### Prywatność
 
-Wyszukiwanie, indeksowanie i OCR domyślnie działają lokalnie. Dokumenty nie są wysyłane do operatora. Aplikacja nie zawiera telemetrii, analityki, statystyk użycia ani raportowania awarii. Opcjonalny chmurowy OCR Gemini jest domyślnie wyłączony: po włączeniu z własnym kluczem API obrazy stron są wysyłane do Google. Weryfikacja zakupionych kluczy łączy się z Polar; pobieranie modeli łączy się z serwerem pobierania, który widzi adres IP. Szczegóły zawiera polityka prywatności.
+Wyszukiwanie, indeksowanie i OCR domyślnie działają lokalnie. Dokumenty nie są wysyłane do operatora. Aplikacja nie zawiera telemetrii, analityki, statystyk użycia ani raportowania awarii. Dokumenty i obrazy nie są wysyłane do żadnej usługi w chmurze. Weryfikacja zakupionych kluczy łączy się z Polar; pobieranie modeli łączy się z serwerem pobierania, który widzi adres IP. Szczegóły zawiera polityka prywatności.
 
 ### Dokumenty prawne i pomoc
 

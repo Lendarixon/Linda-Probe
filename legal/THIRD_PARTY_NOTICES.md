@@ -1,50 +1,17 @@
-# Third-party notices — LocalDocs
+# Third-party notices — Linda Probe 1.4.5
 
-Our own code in `project_search/`, server, scripts: proprietary, (c) owner.
-The source ZIP excludes the Python runtime and model weights. The 0.18 portable
-ZIP includes an unmodified Python runtime, dependency packages, and two embedding
-models: `intfloat/multilingual-e5-small` and
-`sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (Apache-2.0).
-Original model cards and pinned revisions accompany the models. See
-`licenses/MODEL_PROVENANCE.json`, `licenses/RUNTIME_INVENTORY.json`, Python license,
-Apache-2.0 text and original dependency `.dist-info` license files.
+Linda Probe's own code (`project_search/`, the server, the interface and scripts) and the **Linda OCR** recognizer are proprietary, (c) Vladyslav Manzyuk. Linda OCR is an original model trained by the author, who holds all rights to the model and its training data.
 
-| Component | License | Notes |
-|---|---|---|
-| faiss-cpu | MIT (Facebook) | include MIT notice |
-| sentence-transformers, tokenizers, huggingface_hub | Apache-2.0 | |
-| torch (CPU) | BSD-3-style | |
-| numpy, scipy, scikit-learn, pypdf | BSD-3 | |
-| python-docx, tqdm | MIT | include MIT notice |
-| pypdfium2 (+ bundled PDFium) | Apache-2.0 / BSD-3 | |
-| cryptography | Apache-2.0 or BSD (dual) | |
-| Pillow | HPND (permissive) | |
-| ldap3 | LGPL-3.0 | dynamic import only; replaceable via pip; include LGPL text reference |
-| Tesseract OCR 5 | Apache-2.0 | executable/DLLs installed separately, not bundled |
-| tessdata language data (rus/eng/pol/osd) | Apache-2.0 | included in portable; https://github.com/tesseract-ocr/tessdata_fast |
-| fpdf2 (tests only) | LGPL-3.0 | not used by product runtime |
-| lancedb, chromadb (bench only) | Apache-2.0 | test/benchmark deps, not product runtime |
-| Google Gemini API (optional cloud OCR tier) | Google API Terms | opt-in only (`LOCALDOCS_OCR_CLOUD=1`); page images leave the machine; customer API key required |
+Linda Probe ships an unmodified Python 3.12 runtime and the packages below; each keeps its own licence files in `runtime\Lib\site-packages\<package>.dist-info\`. Optional AI models are downloaded after activation from Hugging Face (huggingface.co) and keep the licences of their authors. Paid features license the Linda Probe application workflow only, not third-party components.
 
-LGPL components are used as shared Python packages (dynamic linking) and are
-replaceable by the end user; no static bundling. Full license texts ship with
-their PyPI distributions.
+## Bundled components
 
-## Linda Probe 1.4.x bundled components
-
-This section describes the 1.4.x bundle and supersedes the earlier 0.18 notes
-where the component scope or licence differs (including the e5 model, tqdm and
-fpdf2). The source ZIP still excludes the runtime and model weights. The list
-below records the supplied bundle specification; the runtime, model files and
-their licence inventories are not present in this isolated source workspace,
-so exact installed versions, notices and build options are UNKNOWN here.
-Original upstream licence texts and model notices govern each component.
 
 | Component | Licence | Notices and source |
 |---|---|---|
 | RapidOCR and PP-OCRv6 models | Apache-2.0 | RapidOCR: https://github.com/RapidAI/RapidOCR ; PP-OCRv6 models: PaddleOCR, https://github.com/PaddlePaddle/PaddleOCR . Preserve model notices. |
 | onnxruntime-directml | MIT | ONNX Runtime: https://github.com/microsoft/onnxruntime |
-| opencv-python-headless | Apache-2.0; bundled FFmpeg: LGPL | OpenCV: https://github.com/opencv/opencv-python ; FFmpeg source: https://ffmpeg.org/download.html . Preserve the wheel's third-party notices; exact FFmpeg version and LGPL variant are UNKNOWN in this workspace. |
+| opencv-python-headless | Apache-2.0; bundled FFmpeg: LGPL | OpenCV: https://github.com/opencv/opencv-python ; FFmpeg source: https://ffmpeg.org/download.html . Preserve the wheel's third-party notices; FFmpeg is a separate replaceable DLL. |
 | pyclipper | MIT | https://pypi.org/project/pyclipper/ |
 | shapely | BSD-3-Clause | https://pypi.org/project/shapely/ ; preserve bundled dependency notices as applicable. |
 | pypdfium2 and bundled PDFium | Apache-2.0 / BSD-3-Clause | https://github.com/pypdfium2-team/pypdfium2 ; preserve PDFium third-party notices. |
@@ -60,7 +27,10 @@ Original upstream licence texts and model notices govern each component.
 | Jinja2, MarkupSafe, colorama, mpmath, sympy, omegaconf | BSD-3-Clause | Upstream source distributions: https://pypi.org/project/Jinja2/ ; https://pypi.org/project/MarkupSafe/ ; https://pypi.org/project/colorama/ ; https://pypi.org/project/mpmath/ ; https://pypi.org/project/sympy/ ; https://pypi.org/project/omegaconf/ |
 | intfloat/multilingual-e5-small | MIT | Model card and source: https://huggingface.co/intfloat/multilingual-e5-small . This corrects the earlier grouped Apache-2.0 description for this model. |
 | sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 | Apache-2.0 | Model card and source: https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 |
-| tessdata (rus/eng/pol/osd) | Apache-2.0 | https://github.com/tesseract-ocr/tessdata_fast |
+| olefile 0.47 (vendored in `project_search/_ext/olefile`) | BSD-2-Clause, with inherited PIL licence terms | Copyright (c) Philippe Lagadec; full terms retained in the file headers |
+| GEOS (in shapely.libs), FFmpeg (in cv2) | LGPL-2.1 | separate replaceable DLLs; texts in `shapely-*.dist-info\licenses\LICENSE_GEOS` and `cv2\LICENSE-3RD-PARTY.txt` |
+| OpenBLAS, LAPACK, GCC runtime in numpy/scipy/scikit-learn/faiss wheels | BSD-3-Clause; GCC runtime GPL-3.0-or-later WITH GCC-exception-3.1 | the exception permits redistribution of the runtime; texts in each package's licence file |
+| Intel IPP (in cv2), Intel OpenMP (in torch), Microsoft DirectML and Visual C++ runtime DLLs | vendor redistribution terms | redistributed unmodified as part of the packages above |
 | Linda OCR recognizer | Proprietary; (c) Vladyslav Manzyuk | Author's own trained model, licensed to users only as part of the Linda Probe application. This notice does not relicense third-party OCR models or libraries. |
 
 The LGPL libraries above are shared Python packages, not statically linked into
@@ -68,8 +38,7 @@ the application, and may be replaced by the user in `runtime\Lib\site-packages`.
 Their licences permit modification and redistribution under the applicable LGPL
 terms, including reverse engineering for debugging modifications to those
 libraries. The application's proprietary licence does not restrict those rights.
-Obtain source matching the bundled package version from the linked PyPI source
-distributions; the exact bundled versions are UNKNOWN in this workspace.
+Source for the bundled versions is available from the linked PyPI source distributions.
 For MPL-covered files, source is available from the listed upstream repositories
 and distributions; preserve the MPL notices and file-level rights. These notices
 do not replace the full applicable licence texts or the notices of dependencies
