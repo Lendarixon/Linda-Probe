@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "version": "1.4.5",
+  "files": [],
+  "notes": "Linda Probe 1.4.5: signed updates, local-only OCR, licensing hardening, corrected legal notices.",
+  "installer": {
+    "version": "1.4.5",
+    "url": "https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe",
+    "size": 315623472,
+    "sha256": "0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b",
+    "app_id": "{9A446F89-A4BA-4CA0-8980-55C184AAE862}"
+  }
+}
