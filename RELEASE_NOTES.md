@@ -1,4 +1,4 @@
-# Linda Probe v1.4.5
+# Linda Probe v1.4.6
 
 Local Windows file search and OCR, formerly LocalDocs. Interface languages: English, Russian and Polish.
 
@@ -16,9 +16,9 @@ Free includes filename and exact-word content search, browsing, previews and man
 
 ## Download
 
-[Download Linda Probe 1.4.5 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
+[Download Linda Probe 1.4.6 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
 
-SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
+SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
 
 Requires Windows 10/11 x64. Optional semantic-search and OCR models download after activation and need compatible hardware and sufficient disk space.
 
@@ -28,7 +28,7 @@ Processing is local by default, with no telemetry. Optional Gemini cloud OCR is 
 
 Support and refund requests: lindapro.support@proton.me. Full refund on request within 14 days of purchase; mandatory consumer rights remain unaffected.
 
-**What's new in 1.4.5 / Что нового / Co nowego**
-- Signed in-app updates enabled (checks this repository's `update/latest.json`, Ed25519-verified). / Включены подписанные обновления в приложении. / Włączono podpisane aktualizacje w aplikacji.
-- Removed the unused optional cloud-OCR code: everything runs locally. / Удалён неиспользуемый облачный OCR: всё работает локально. / Usunięto nieużywany kod OCR w chmurze: wszystko działa lokalnie.
-- Licensing hardening; corrected third-party notices, privacy policy and terms. / Усиление лицензирования; исправлены уведомления, политика конфиденциальности и условия. / Wzmocnienie licencjonowania; poprawione informacje o komponentach, polityka prywatności i warunki.
+**What's new in 1.4.6 / Что нового / Co nowego**
+- Licence model: free personal non-commercial use under CC BY-NC 4.0; commercial use needs a paid or gift key. / Модель лицензии: бесплатное личное некоммерческое использование по CC BY-NC 4.0; коммерческое — по платному или подарочному ключу. / Model licencji: darmowe użycie osobiste niekomercyjne na CC BY-NC 4.0; użycie komercyjne wymaga płatnego lub prezentowego klucza.
+- Fixed: in-app update could not start the installer; signed updates now work. / Исправлено: обновление в приложении не могло запустить установщик. / Naprawiono: aktualizacja w aplikacji nie mogła uruchomić instalatora.
+- Local-only OCR (unused cloud code removed), licensing hardening, corrected notices, privacy policy and terms. / Только локальный OCR, усиление лицензирования, исправленные уведомления, политика и условия. / Tylko lokalny OCR, wzmocnienie licencji, poprawione informacje, polityka i warunki.
