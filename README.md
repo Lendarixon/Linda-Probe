@@ -2,7 +2,7 @@
 
 ![Linda Probe logo](images/logo.png)
 
-# Linda Probe 1.4.5
+# Linda Probe 1.4.6
 
 <a id="en"></a>
 ## EN — English
@@ -36,11 +36,13 @@ Personal/Team include the purchased version and fixes perpetually; new major ver
 
 Polar is the Merchant of Record. Tax and the final total are shown before payment. Operator: Vladyslav Manzyuk, Poland. Request a full refund within 14 days of purchase through support or Polar. Mandatory consumer rights remain unaffected.
 
+Licence model: personal, non-commercial use of Linda Probe's free features (no key) is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use (paid work or clients, use inside a company, school or other organization, or in a product or service you sell) and all Pro features require a paid or gift licence key; every paid key includes commercial use within its user and device limits, and a gift key (Personal) includes commercial use for that person.
+
 ### Download and installation
 
-[Download Linda Probe 1.4.5 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
+[Download Linda Probe 1.4.6 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
 
-SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
+SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
 
 Download the installer, compare its SHA-256 with the published value, then run it and follow the installer. The installer is not yet code-signed, so Windows SmartScreen may warn. After checking the source and hash, choose **More info -> Run anyway** to continue.
 
@@ -102,11 +104,13 @@ Personal/Team: купленная версия и исправления бес�
 
 Polar — Merchant of Record. Налог и окончательная сумма видны до оплаты. Оператор: Vladyslav Manzyuk, Польша. Полный возврат можно запросить в течение 14 дней с даты покупки через поддержку или Polar. Обязательные права потребителя сохраняются.
 
+Модель лицензии: личное некоммерческое использование бесплатных функций Linda Probe (без ключа) лицензируется по Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Коммерческое использование (платная работа или клиенты, работа внутри компании, школы или иной организации, продукт или услуга для продажи) и все функции Pro требуют платного или подарочного ключа; любой платный ключ включает коммерческое использование в пределах лимитов пользователей и устройств, подарочный ключ (Personal) — для этого человека.
+
 ### Скачать и установить
 
-[Скачать Linda Probe 1.4.5 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
+[Скачать Linda Probe 1.4.6 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
 
-SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
+SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
 
 Скачайте установщик, сравните его SHA-256 с опубликованным значением, запустите и следуйте инструкциям. Установщик пока не имеет подписи кода, поэтому Windows SmartScreen может показать предупреждение. После проверки источника и хеша выберите **More info -> Run anyway** («Подробнее -> Выполнить в любом случае»).
 
@@ -168,11 +172,13 @@ Personal/Team obejmują zakupioną wersję i jej poprawki bezterminowo; nowe gł
 
 Polar jest Merchant of Record. Podatek i ostateczna kwota są widoczne przed płatnością. Operator: Vladyslav Manzyuk, Polska. O pełny zwrot można wystąpić w ciągu 14 dni od zakupu przez pomoc techniczną lub Polar. Obowiązkowe prawa konsumenta pozostają w mocy.
 
+Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Probe (bez klucza) jest licencjonowane na zasadach Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Użycie komercyjne (płatna praca lub klienci, użycie w firmie, szkole lub innej organizacji, produkt lub usługa na sprzedaż) oraz wszystkie funkcje Pro wymagają płatnego lub prezentowego klucza; każdy płatny klucz obejmuje użycie komercyjne w granicach limitów użytkowników i urządzeń, klucz prezentowy (Personal) — dla tej osoby.
+
 ### Pobieranie i instalacja
 
-[Pobierz Linda Probe 1.4.5 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.5/LindaProbe-Setup-1.4.5.exe)
+[Pobierz Linda Probe 1.4.6 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
 
-SHA-256: `0836424260c32146376e371dce2d66903c094860ab730d6086e9b684af42605b`
+SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
 
 Pobierz instalator, porównaj jego SHA-256 z opublikowaną wartością, uruchom go i wykonaj instrukcje. Instalator nie ma jeszcze podpisu kodu, więc Windows SmartScreen może wyświetlić ostrzeżenie. Po sprawdzeniu źródła i skrótu wybierz **More info -> Run anyway** („Więcej informacji -> Uruchom mimo to”).
 

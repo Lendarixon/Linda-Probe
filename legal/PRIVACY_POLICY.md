@@ -1,4 +1,4 @@
-# Linda Probe 1.4.5 — Privacy policy / Политика конфиденциальности / Polityka prywatności
+# Linda Probe 1.4.6 — Privacy policy / Политика конфиденциальности / Polityka prywatności
 
 Date / Дата / Data: 25 October 2026
 

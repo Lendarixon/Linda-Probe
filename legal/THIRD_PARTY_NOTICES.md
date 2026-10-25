@@ -1,4 +1,4 @@
-# Third-party notices — Linda Probe 1.4.5
+# Third-party notices — Linda Probe 1.4.6
 
 Linda Probe's own code (`project_search/`, the server, the interface and scripts) and the **Linda OCR** recognizer are proprietary, (c) Vladyslav Manzyuk. Linda OCR is an original model trained by the author, who holds all rights to the model and its training data.
 
@@ -17,7 +17,7 @@ Linda Probe ships an unmodified Python 3.12 runtime and the packages below; each
 | pypdfium2 and bundled PDFium | Apache-2.0 / BSD-3-Clause | https://github.com/pypdfium2-team/pypdfium2 ; preserve PDFium third-party notices. |
 | numpy, scipy, scikit-learn | BSD-3-Clause | https://pypi.org/project/numpy/ ; https://pypi.org/project/scipy/ ; https://pypi.org/project/scikit-learn/ |
 | torch | BSD-3-Clause | https://github.com/pytorch/pytorch ; preserve bundled dependency notices. |
-| transformers, sentence-transformers, tokenizers, safetensors, huggingface_hub | Apache-2.0 | Sources: https://github.com/huggingface/transformers ; https://github.com/UKPLab/sentence-transformers ; https://github.com/huggingface/tokenizers ; https://github.com/huggingface/safetensors ; https://github.com/huggingface/huggingface_hub |
+| transformers, sentence-transformers, tokenizers, safetensors, huggingface_hub | Apache-2.0 | Sources: https://github.com/huggingface/transformers ; https://github.com/UKPLab/sentence-transformers ; https://github.com/huggingface/tokenizers ; https://github.com/huggingface/safetensors ; https://github.com/huggingface/huggingface_hub | tokenizers licence text ships as `licenses/TOKENIZERS-0.23.3-LICENSE.txt`
 | faiss-cpu | MIT | https://github.com/facebookresearch/faiss |
 | cryptography | Apache-2.0 OR BSD-3-Clause | https://github.com/pyca/cryptography ; preserve bundled dependency notices. |
 | certifi | MPL-2.0 | Upstream source: https://github.com/certifi/python-certifi ; source distributions: https://pypi.org/project/certifi/#files . |

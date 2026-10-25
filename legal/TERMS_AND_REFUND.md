@@ -1,4 +1,4 @@
-# Linda Probe 1.4.5 — Terms and refund / Условия и возврат / Warunki i zwroty
+# Linda Probe 1.4.6 — Terms and refund / Условия и возврат / Warunki i zwroty
 
 Date / Дата / Data: 25 October 2026
 
@@ -91,3 +91,13 @@ Podarunkowe klucze Personal są bezterminowymi kuponami podpisanymi Ed25519, wer
 Pełnego zwrotu można zażądać w ciągu 14 dni od zakupu przez lindapro.support@proton.me lub Polar. Zwrot powoduje cofnięcie zakupionego klucza; potwierdzone cofnięcie blokuje Pro przy następnej udanej weryfikacji. Obowiązkowe prawa konsumenta, również wykraczające poza tę dobrowolną politykę zwrotów, pozostają w mocy.
 
 Warunki podlegają prawu polskiemu bez pozbawiania konsumenta obowiązkowej ochrony wynikającej z prawa kraju jego zwykłego pobytu. Komponenty i wagi modeli stron trzecich zachowują własne licencje; płatne funkcje licencjonują sposób działania aplikacji Probe, a nie wyłączną własność modeli stron trzecich. Zobacz `THIRD_PARTY_NOTICES.md`.
+
+---
+
+## Licence model / Модель лицензии / Model licencji
+
+**EN.** Licence model: personal, non-commercial use of Linda Probe's free features (no key) is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use (paid work or clients, use inside a company, school or other organization, or in a product or service you sell) and all Pro features require a paid or gift licence key; every paid key includes commercial use within its user and device limits, and a gift key (Personal) includes commercial use for that person.
+
+**RU.** Модель лицензии: личное некоммерческое использование бесплатных функций Linda Probe (без ключа) лицензируется по Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Коммерческое использование (платная работа или клиенты, работа внутри компании, школы или иной организации, продукт или услуга для продажи) и все функции Pro требуют платного или подарочного ключа; любой платный ключ включает коммерческое использование в пределах лимитов пользователей и устройств, подарочный ключ (Personal) — для этого человека.
+
+**PL.** Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Probe (bez klucza) jest licencjonowane na zasadach Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Użycie komercyjne (płatna praca lub klienci, użycie w firmie, szkole lub innej organizacji, produkt lub usługa na sprzedaż) oraz wszystkie funkcje Pro wymagają płatnego lub prezentowego klucza; każdy płatny klucz obejmuje użycie komercyjne w granicach limitów użytkowników i urządzeń, klucz prezentowy (Personal) — dla tej osoby.
