@@ -2,7 +2,7 @@
 
 ![Linda Probe logo](images/logo.png)
 
-# Linda Probe 1.4.6
+# Linda Probe 1.4.8
 
 <a id="en"></a>
 ## EN — English
@@ -40,9 +40,9 @@ Licence model: personal, non-commercial use of Linda Probe's free features (no k
 
 ### Download and installation
 
-[Download Linda Probe 1.4.6 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
+[Download Linda Probe 1.4.8 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.8/LindaProbe-Setup-1.4.8.exe)
 
-SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
+SHA-256: `057e3651aab05cfc404680552b91de0090097c4e2ecb3986b79e20ffbf449b48`
 
 Download the installer, compare its SHA-256 with the published value, then run it and follow the installer. The installer is not yet code-signed, so Windows SmartScreen may warn. After checking the source and hash, choose **More info -> Run anyway** to continue.
 
@@ -108,9 +108,9 @@ Polar — Merchant of Record. Налог и окончательная сумм�
 
 ### Скачать и установить
 
-[Скачать Linda Probe 1.4.6 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
+[Скачать Linda Probe 1.4.8 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.8/LindaProbe-Setup-1.4.8.exe)
 
-SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
+SHA-256: `057e3651aab05cfc404680552b91de0090097c4e2ecb3986b79e20ffbf449b48`
 
 Скачайте установщик, сравните его SHA-256 с опубликованным значением, запустите и следуйте инструкциям. Установщик пока не имеет подписи кода, поэтому Windows SmartScreen может показать предупреждение. После проверки источника и хеша выберите **More info -> Run anyway** («Подробнее -> Выполнить в любом случае»).
 
@@ -176,9 +176,9 @@ Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Pr
 
 ### Pobieranie i instalacja
 
-[Pobierz Linda Probe 1.4.6 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.6/LindaProbe-Setup-1.4.6.exe)
+[Pobierz Linda Probe 1.4.8 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.8/LindaProbe-Setup-1.4.8.exe)
 
-SHA-256: `9228a939d04a5a3f693be33a83b48fdf5feb9a993e8b88b2ebe9efd35701c0b9`
+SHA-256: `057e3651aab05cfc404680552b91de0090097c4e2ecb3986b79e20ffbf449b48`
 
 Pobierz instalator, porównaj jego SHA-256 z opublikowaną wartością, uruchom go i wykonaj instrukcje. Instalator nie ma jeszcze podpisu kodu, więc Windows SmartScreen może wyświetlić ostrzeżenie. Po sprawdzeniu źródła i skrótu wybierz **More info -> Run anyway** („Więcej informacji -> Uruchom mimo to”).
 
