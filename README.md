@@ -1,8 +1,9 @@
+<!-- Legal text updated: 30 October 2026. Download remains the published 1.4.10. -->
 [English](#en) · [Русский](#ru) · [Polski](#pl)
 
 ![Linda Probe logo](images/logo.png)
 
-# Linda Probe 1.4.9
+# Linda Probe 1.4.10
 
 <a id="en"></a>
 ## EN — English
@@ -26,6 +27,10 @@ Neither edition has tariff limits on file count or processing speed.
 
 ### Pricing
 
+You can deliberately start a seven-day Pro trial in the app. The trial and an active temporary promo grant the same rights as a Personal licence, including commercial use, for one person on up to 3 devices until they end. One trial is available per Windows user and machine; removing a key does not restart or restore it. Promo keys work offline through the displayed date, inclusive in UTC, and are distinct from perpetual gift and purchased Personal keys. Neither the trial nor the promo creates a subscription or an automatic payment. When either expires, the app returns to Free; documents, indexes and downloaded models stay. Pro actions require an active licence, trial or promo. Starting a trial and verifying a promo require no network connection and send nothing over the network. Model downloads are optional and require internet, compatible hardware and sufficient disk space.
+
+Trial start and promo verification are offline and send nothing over the network, including to Polar. Windows DPAPI protects the machine-bound local access cache. A local marker in the user data folder and a marker under HKCU\Software\LindaProbe record that the trial was used, solely to prevent another trial for that Windows user and machine. Removing a key does not remove these markers. The desktop uninstaller retains the data folder unless you choose to delete its indexes and models; that choice also deletes the file marker, but the HKCU marker remains after uninstalling. The markers have no automatic expiry or reset in the app. The Microsoft Store and installer versions may keep separate markers.
+
 | Pro licence | Price | Users and devices |
 |---|---|---|
 | [Personal](https://buy.polar.sh/polar_cl_ocKiMPEuNUcBaYd1VuznOqJG0Nba621QOuHgn3wqovL) | USD 10 once | 1 named user, up to 3 devices |
@@ -36,13 +41,13 @@ Personal/Team include the purchased version and fixes perpetually; new major ver
 
 Polar is the Merchant of Record. Tax and the final total are shown before payment. Operator: Vladyslav Manzyuk, Poland. Request a full refund within 14 days of purchase through support or Polar. Mandatory consumer rights remain unaffected.
 
-Licence model: personal, non-commercial use of Linda Probe's free features (no key) is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use (paid work or clients, use inside a company, school or other organization, or in a product or service you sell) and all Pro features require a paid or gift licence key; every paid key includes commercial use within its user and device limits, and a gift key (Personal) includes commercial use for that person.
+Licence model: personal, non-commercial use of Linda Probe's free features (no key) is licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use (paid work or clients, use inside a company, school or other organization, or in a product or service you sell) and all Pro features require a paid or gift licence key, an active trial or an active temporary promo; every paid key includes commercial use within its user and device limits, and a gift key (Personal) includes commercial use for that person.
 
 ### Download and installation
 
-[Download Linda Probe 1.4.9 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.9/LindaProbe-Setup-1.4.9.exe)
+[Download Linda Probe 1.4.10 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe)
 
-SHA-256: `5b10157f071951050dcd92620479c7174eed5d65eb9d31951fbdf88973415a0c`
+SHA-256: `54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f`
 
 Download the installer, compare its SHA-256 with the published value, then run it and follow the installer. The installer is not yet code-signed, so Windows SmartScreen may warn. After checking the source and hash, choose **More info -> Run anyway** to continue.
 
@@ -94,6 +99,10 @@ Linda Probe, ранее LocalDocs, — приложение для Windows: по
 
 ### Цены
 
+Вы можете самостоятельно запустить семидневный пробный период Pro в приложении. Пробный период и действующий временный промоключ дают те же права, что и лицензия Personal, включая коммерческое использование, для одного человека на 3 устройствах до окончания срока. Один пробный период доступен для каждого пользователя Windows на каждом компьютере; удаление ключа не запускает и не восстанавливает его. Промоключи работают офлайн до указанной даты включительно по UTC и отличаются от бессрочных подарочных и купленных ключей Personal. Пробный период и промоключ не создают подписку или автоматический платёж. По окончании срока приложение возвращается в Free; документы, индексы и скачанные модели сохраняются. Для действий Pro нужна действующая лицензия, пробный период или промоключ. Запуск пробного периода и проверка промоключа не требуют подключения к сети и ничего не передают по сети. Загрузка моделей необязательна; для неё нужны интернет, совместимое оборудование и свободное место на диске.
+
+Запуск пробного периода и проверка промоключа выполняются офлайн и ничего не передают по сети, в том числе в Polar. Windows DPAPI защищает локальный кеш доступа, привязанный к компьютеру. Локальная отметка в папке данных пользователя и отметка в HKCU\Software\LindaProbe фиксируют использование пробного периода только для предотвращения повторного запуска у этого пользователя Windows на этом компьютере. Удаление ключа не удаляет эти отметки. Деинсталлятор настольной версии сохраняет папку данных, если вы не выбрали удаление индексов и моделей; этот выбор также удаляет файловую отметку, но отметка HKCU остаётся после удаления программы. В приложении нет автоматического истечения срока или сброса отметок. У версий из Microsoft Store и установщика могут быть отдельные отметки.
+
 | Лицензия Pro | Цена | Пользователи и устройства |
 |---|---|---|
 | [Personal](https://buy.polar.sh/polar_cl_ocKiMPEuNUcBaYd1VuznOqJG0Nba621QOuHgn3wqovL) | USD 10 разово | 1 именной пользователь, до 3 устройств |
@@ -104,13 +113,13 @@ Personal/Team: купленная версия и исправления бес�
 
 Polar — Merchant of Record. Налог и окончательная сумма видны до оплаты. Оператор: Vladyslav Manzyuk, Польша. Полный возврат можно запросить в течение 14 дней с даты покупки через поддержку или Polar. Обязательные права потребителя сохраняются.
 
-Модель лицензии: личное некоммерческое использование бесплатных функций Linda Probe (без ключа) лицензируется по Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Коммерческое использование (платная работа или клиенты, работа внутри компании, школы или иной организации, продукт или услуга для продажи) и все функции Pro требуют платного или подарочного ключа; любой платный ключ включает коммерческое использование в пределах лимитов пользователей и устройств, подарочный ключ (Personal) — для этого человека.
+Модель лицензии: личное некоммерческое использование бесплатных функций Linda Probe (без ключа) лицензируется по Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Коммерческое использование (платная работа или клиенты, работа внутри компании, школы или иной организации, продукт или услуга для продажи) и все функции Pro требуют платного или подарочного ключа, действующего пробного периода или временного промоключа; любой платный ключ включает коммерческое использование в пределах лимитов пользователей и устройств, подарочный ключ (Personal) — для этого человека.
 
 ### Скачать и установить
 
-[Скачать Linda Probe 1.4.9 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.9/LindaProbe-Setup-1.4.9.exe)
+[Скачать Linda Probe 1.4.10 для Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe)
 
-SHA-256: `5b10157f071951050dcd92620479c7174eed5d65eb9d31951fbdf88973415a0c`
+SHA-256: `54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f`
 
 Скачайте установщик, сравните его SHA-256 с опубликованным значением, запустите и следуйте инструкциям. Установщик пока не имеет подписи кода, поэтому Windows SmartScreen может показать предупреждение. После проверки источника и хеша выберите **More info -> Run anyway** («Подробнее -> Выполнить в любом случае»).
 
@@ -162,6 +171,10 @@ Linda Probe, wcześniej LocalDocs, to aplikacja dla Windows do wyszukiwania loka
 
 ### Ceny
 
+Możesz samodzielnie uruchomić siedmiodniowy okres próbny Pro w aplikacji. Okres próbny i aktywny tymczasowy klucz promocyjny dają takie same prawa jak licencja Personal, w tym do użytku komercyjnego, jednej osobie na maksymalnie 3 urządzeniach do końca ich ważności. Jeden okres próbny przysługuje każdemu użytkownikowi Windows na każdym komputerze; usunięcie klucza nie uruchamia go ponownie ani nie przywraca. Klucze promocyjne działają offline do wyświetlonej daty włącznie według UTC i różnią się od bezterminowych kluczy podarunkowych i zakupionych kluczy Personal. Ani okres próbny, ani klucz promocyjny nie tworzą subskrypcji ani automatycznej płatności. Po wygaśnięciu aplikacja wraca do Free; dokumenty, indeksy i pobrane modele pozostają. Działania Pro wymagają aktywnej licencji, okresu próbnego lub klucza promocyjnego. Uruchomienie okresu próbnego i weryfikacja klucza promocyjnego nie wymagają połączenia z siecią i niczego przez nią nie wysyłają. Pobieranie modeli jest opcjonalne i wymaga internetu, zgodnego sprzętu oraz wolnego miejsca na dysku.
+
+Uruchomienie okresu próbnego i weryfikacja klucza promocyjnego odbywają się offline i niczego nie wysyłają przez sieć, również do Polar. Windows DPAPI chroni lokalną pamięć dostępu powiązaną z komputerem. Lokalny znacznik w folderze danych użytkownika oraz znacznik w HKCU\Software\LindaProbe zapisują wykorzystanie okresu próbnego wyłącznie w celu zapobiegania kolejnej próbie dla tego użytkownika Windows na tym komputerze. Usunięcie klucza nie usuwa tych znaczników. Deinstalator wersji komputerowej zachowuje folder danych, chyba że wybierzesz usunięcie indeksów i modeli; ten wybór usuwa też znacznik plikowy, ale znacznik HKCU pozostaje po odinstalowaniu. Aplikacja nie przewiduje automatycznego wygaśnięcia ani resetowania znaczników. Wersje z Microsoft Store i instalatora mogą mieć oddzielne znaczniki.
+
 | Licencja Pro | Cena | Użytkownicy i urządzenia |
 |---|---|---|
 | [Personal](https://buy.polar.sh/polar_cl_ocKiMPEuNUcBaYd1VuznOqJG0Nba621QOuHgn3wqovL) | USD 10 jednorazowo | 1 wskazany użytkownik, do 3 urządzeń |
@@ -172,13 +185,13 @@ Personal/Team obejmują zakupioną wersję i jej poprawki bezterminowo; nowe gł
 
 Polar jest Merchant of Record. Podatek i ostateczna kwota są widoczne przed płatnością. Operator: Vladyslav Manzyuk, Polska. O pełny zwrot można wystąpić w ciągu 14 dni od zakupu przez pomoc techniczną lub Polar. Obowiązkowe prawa konsumenta pozostają w mocy.
 
-Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Probe (bez klucza) jest licencjonowane na zasadach Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Użycie komercyjne (płatna praca lub klienci, użycie w firmie, szkole lub innej organizacji, produkt lub usługa na sprzedaż) oraz wszystkie funkcje Pro wymagają płatnego lub prezentowego klucza; każdy płatny klucz obejmuje użycie komercyjne w granicach limitów użytkowników i urządzeń, klucz prezentowy (Personal) — dla tej osoby.
+Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Probe (bez klucza) jest licencjonowane na zasadach Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Użycie komercyjne (płatna praca lub klienci, użycie w firmie, szkole lub innej organizacji, produkt lub usługa na sprzedaż) oraz wszystkie funkcje Pro wymagają płatnego lub prezentowego klucza, aktywnego okresu próbnego lub tymczasowego klucza promocyjnego; każdy płatny klucz obejmuje użycie komercyjne w granicach limitów użytkowników i urządzeń, klucz prezentowy (Personal) — dla tej osoby.
 
 ### Pobieranie i instalacja
 
-[Pobierz Linda Probe 1.4.9 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.9/LindaProbe-Setup-1.4.9.exe)
+[Pobierz Linda Probe 1.4.10 dla Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe)
 
-SHA-256: `5b10157f071951050dcd92620479c7174eed5d65eb9d31951fbdf88973415a0c`
+SHA-256: `54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f`
 
 Pobierz instalator, porównaj jego SHA-256 z opublikowaną wartością, uruchom go i wykonaj instrukcje. Instalator nie ma jeszcze podpisu kodu, więc Windows SmartScreen może wyświetlić ostrzeżenie. Po sprawdzeniu źródła i skrótu wybierz **More info -> Run anyway** („Więcej informacji -> Uruchom mimo to”).
 

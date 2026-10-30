@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.9",
+  "version": "1.4.10",
   "files": [],
-  "notes": "Linda Probe 1.4.9: see GitHub release notes.",
+  "notes": "Linda Probe 1.4.10: see GitHub release notes.",
   "installer": {
-    "version": "1.4.9",
-    "url": "https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.9/LindaProbe-Setup-1.4.9.exe",
-    "size": 329019681,
-    "sha256": "5b10157f071951050dcd92620479c7174eed5d65eb9d31951fbdf88973415a0c",
+    "version": "1.4.10",
+    "url": "https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe",
+    "size": 315485991,
+    "sha256": "54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f",
     "app_id": "{9A446F89-A4BA-4CA0-8980-55C184AAE862}"
   }
 }
