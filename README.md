@@ -4,6 +4,7 @@
 ![Linda Probe logo](images/logo.png)
 
 # Linda Probe 1.4.10
+**Get Linda Probe:** [Microsoft Store](https://apps.microsoft.com/detail/9PGM1V68193X) (signed) or [project page](https://lendarixon.github.io/Linda/probe.html?utm_source=producthunt).
 
 <a id="en"></a>
 ## EN — English
