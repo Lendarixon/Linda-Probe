@@ -1,16 +1,17 @@
-# Linda Probe v1.4.10
+# Linda Probe 2.0.0
 
-Local Windows file search and OCR. Interface languages: English, Russian and Polish.
+Local Windows file search, offline OCR, and AI photo search — 100% private, zero telemetry, one-time purchase. Interface languages: English, Russian, and Polish.
 
-**What's new / Что нового / Co nowego**
-- Start a seven-day Pro trial in the app. It grants the same rights as Personal for one person until expiry, with no automatic payment. / В приложении можно запустить семидневный пробный период Pro с правами Personal для одного человека до окончания срока, без автоматического платежа. / W aplikacji możesz uruchomić siedmiodniowy okres próbny Pro z prawami Personal dla jednej osoby do końca ważności, bez automatycznej płatności.
-- Temporary promo keys unlock Personal Pro offline through the displayed UTC date. When trial or promo access ends, the app returns to Free and keeps documents, indexes and downloaded models. / Временные промоключи открывают Personal Pro офлайн до указанной даты включительно по UTC. После окончания пробного периода или промоключа приложение возвращается в Free, сохраняя документы, индексы и скачанные модели. / Tymczasowe klucze promocyjne odblokowują Personal Pro offline do wyświetlonej daty włącznie według UTC. Po wygaśnięciu próby lub promocji aplikacja wraca do Free, zachowując dokumenty, indeksy i pobrane modele.
-- Linda Probe is now also available in Microsoft Store. / Linda Probe теперь также доступна в Microsoft Store. / Linda Probe jest teraz dostępna również w Microsoft Store.
+## What's New in 2.0.0
+- Modern Fluent 2.0 interface in Dark and Light themes.
+- Command Palette (`Ctrl+K`) to jump to tabs, folders, recent searches, themes, and diagnostics.
+- Live debounced filename suggestions as you type, incremental results rendering, export (CSV / Markdown / JSON), and 1-click Copy Citation.
+- Redesigned Pro & 7-day offline trial storefront with status bar plan badge.
+- Built-in `/doctor` system diagnostics and updated third-party license notices.
 
 ## Download
+[Download Linda Probe 2.0.0 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v2.0.0/LindaProbe-Setup-2.0.0.exe)
 
-[Download Linda Probe 1.4.10 for Windows x64](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe)
+SHA-256: `2d4f7fd304e78dc424fb30c4e1a07bf411f99f644f47cd77b24fa61be5cc97bf`
 
-SHA-256: `54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f`
-
-Requires Windows 10/11 x64. The installer is not yet code-signed, so Windows SmartScreen may warn; after verifying the source and SHA-256, choose **More info -> Run anyway**. Processing is local; the app has no telemetry. Support and refunds: lindapro.support@proton.me.
+Requires Windows 10/11 x64. The standalone installer is not yet code-signed, so Windows SmartScreen may warn; after verifying the source and SHA-256, choose **More info -> Run anyway**. Also available in [Microsoft Store](https://apps.microsoft.com/detail/9PGM1V68193X). Support and refunds: lindapro.support@proton.me.

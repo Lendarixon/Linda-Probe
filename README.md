@@ -62,11 +62,11 @@ Try every Pro feature risk-free: start a **7-day Pro trial** directly inside the
 ## Download & Installation
 
 - **Recommended (Signed):** [**Install from Microsoft Store**](https://apps.microsoft.com/detail/9PGM1V68193X)
-- **Standalone Windows x64 Installer (Latest published build 1.4.10):** [**Download LindaProbe-Setup-1.4.10.exe**](https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe)
+- **Standalone Windows x64 Installer (Windows x64 — 2.0.0):** [**Download LindaProbe-Setup-2.0.0.exe**](https://github.com/Lendarixon/Linda-Probe/releases/download/v2.0.0/LindaProbe-Setup-2.0.0.exe)
 
-SHA-256 (`LindaProbe-Setup-1.4.10.exe`):
+SHA-256 (`LindaProbe-Setup-2.0.0.exe`):
 ```text
-54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f
+2d4f7fd304e78dc424fb30c4e1a07bf411f99f644f47cd77b24fa61be5cc97bf
 ```
 
 Verify the SHA-256 hash before running the standalone installer. Because the standalone `.exe` installer is not yet code-signed, Windows SmartScreen may show a warning — after verifying the source and hash, select **More info -> Run anyway**.

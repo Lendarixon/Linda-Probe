@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "version": "1.4.10",
+  "version": "2.0.0",
   "files": [],
-  "notes": "Linda Probe 1.4.10: see GitHub release notes.",
+  "notes": "Linda Probe 2.0.0: Modern Fluent 2.0 UI, Command Palette (Ctrl+K), live filename search, export & citations.",
   "installer": {
-    "version": "1.4.10",
-    "url": "https://github.com/Lendarixon/Linda-Probe/releases/download/v1.4.10/LindaProbe-Setup-1.4.10.exe",
-    "size": 315485991,
-    "sha256": "54489279e04992120686bcc8c2221feb206cb1abd768c1dbd7331d426e88262f",
+    "version": "2.0.0",
+    "url": "https://github.com/Lendarixon/Linda-Probe/releases/download/v2.0.0/LindaProbe-Setup-2.0.0.exe",
+    "size": 315513548,
+    "sha256": "2d4f7fd304e78dc424fb30c4e1a07bf411f99f644f47cd77b24fa61be5cc97bf",
     "app_id": "{9A446F89-A4BA-4CA0-8980-55C184AAE862}"
   }
 }
