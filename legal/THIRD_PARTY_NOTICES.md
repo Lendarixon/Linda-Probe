@@ -1,4 +1,4 @@
-# Third-party notices — Linda Probe 1.4.6
+# Third-party notices — Linda Probe 2.0.0
 
 Linda Probe's own code (`project_search/`, the server, the interface and scripts) and the **Linda OCR** recognizer are proprietary, (c) Vladyslav Manzyuk. Linda OCR is an original model trained by the author, who holds all rights to the model and its training data.
 
@@ -32,6 +32,19 @@ Linda Probe ships an unmodified Python 3.12 runtime and the packages below; each
 | OpenBLAS, LAPACK, GCC runtime in numpy/scipy/scikit-learn/faiss wheels | BSD-3-Clause; GCC runtime GPL-3.0-or-later WITH GCC-exception-3.1 | the exception permits redistribution of the runtime; texts in each package's licence file |
 | Intel IPP (in cv2), Intel OpenMP (in torch), Microsoft DirectML and Visual C++ runtime DLLs | vendor redistribution terms | redistributed unmodified as part of the packages above |
 | Linda OCR recognizer | Proprietary; (c) Vladyslav Manzyuk | Author's own trained model, licensed to users only as part of the Linda Probe application. This notice does not relicense third-party OCR models or libraries. |
+| pywebview | BSD-3-Clause | https://github.com/r0x0r/pywebview |
+| pypdf | BSD-3-Clause | https://github.com/py-pdf/pypdf |
+| python-docx | MIT | https://github.com/python-openxml/python-docx |
+| requests | Apache-2.0 | https://github.com/psf/requests |
+| urllib3 | MIT | https://github.com/urllib3/urllib3 |
+| regex | Apache-2.0 | https://github.com/mrabarnett/mrab-regex |
+| filelock | Unlicense | https://github.com/tox-dev/filelock |
+| packaging | Apache-2.0 OR BSD-2-Clause | https://github.com/pypa/packaging |
+| typing_extensions | PSF-2.0 | https://github.com/python/typing_extensions |
+| typing-inspection | MIT | https://github.com/pydantic/typing-inspection |
+| Pillow | HPND / MIT-CMU | https://github.com/python-pillow/Pillow |
+| charset-normalizer | MIT | https://github.com/jawah/charset_normalizer |
+| idna | BSD-3-Clause | https://github.com/kjd/idna |
 
 The LGPL libraries above are shared Python packages, not statically linked into
 the application, and may be replaced by the user in `runtime\Lib\site-packages`.

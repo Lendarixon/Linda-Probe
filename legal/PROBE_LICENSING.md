@@ -1,4 +1,4 @@
-Linda Probe Free / Pro — 30 October 2026
+Linda Probe 2.0.0 Free / Pro — 25 November 2026
 
 Free: filename and exact-word content search, browsing, previews, manual tags.
 Pro: semantic search, OCR for scans and searchable PDFs, photo search by description/example, automatic tags.
@@ -38,3 +38,33 @@ PL: Uruchomienie okresu próbnego i weryfikacja klucza promocyjnego odbywają si
 Third-party components and model weights retain their own licences. These paid features license the Probe application workflow, not exclusive ownership of third-party models. See THIRD_PARTY_NOTICES.md.
 
 Model licencji: osobiste, niekomercyjne korzystanie z darmowych funkcji Linda Probe (bez klucza) jest licencjonowane na zasadach Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0, https://creativecommons.org/licenses/by-nc/4.0/legalcode). Użycie komercyjne (płatna praca lub klienci, użycie w firmie, szkole lub innej organizacji, produkt lub usługa na sprzedaż) oraz wszystkie funkcje Pro wymagają płatnego lub prezentowego klucza, aktywnego okresu próbnego lub tymczasowego klucza promocyjnego; każdy płatny klucz obejmuje użycie komercyjne w granicach limitów użytkowników i urządzeń, klucz prezentowy (Personal) — dla tej osoby.
+Implementation notes — 30 October 2026
+
+Seven-day Pro trial
+- The user explicitly starts the trial in the licence panel or beside the OCR/semantic Pro hints. Status checks, imports, startup and model preparation never start it.
+- POST /license with action start_trial uses the same owner-token check as activation/removal. It grants Personal Pro features for 7 x 24 hours, including optional model downloads. Starting the trial itself neither downloads models nor contacts Polar.
+- The active, keyless trial is stored in probe_license.dat using the existing Windows user DPAPI protection and machine_id binding. probe_trial.dat retains protected evidence of use even after a key replaces the trial.
+- A second DPAPI-protected REG_BINARY value, TrialV1_<machine_id>, is written under HKCU\Software\LindaProbe before Pro is granted. An existing marker, including a damaged marker, refuses a second trial. Removing the data folder does not remove this HKCU marker. Registry access failure refuses a new trial.
+- LOCALDOCS_DATA_DIR selects writable licence storage; LOCALDOCS_WRITE_DIR is its fallback, followed by the existing per-user LocalAppData location. store_launch.py already sets both variables to its writable data folder. No licence files are written into the read-only MSIX package. HKCU may be virtualized by Windows for the packaged app; cross-channel sharing and marker persistence after package uninstall/reset need native MSIX verification.
+- Moving the clock before the recorded start immediately expires the trial. Trial/promo clock rollback also uses the existing 300-second last_seen tolerance. Offline revalidation preserves the timestamp high-water mark; observed expiry/rollback is recorded as expired.
+- A paid, gift or promo key can replace an active trial. Removing a key leaves Free and never resumes or restarts a trial. Documents, indexes and downloaded models are retained when access expires.
+- public_state reports licensed/edition/features, kind trial, days_left (remaining 24-hour periods rounded up), expires_at (UTC ISO timestamp), an empty key_hint and trial_available. Expired trial/promo state retains its kind and expiry but reports Free, no active tier and all Pro features false. UI refreshes temporary access at least once per minute while the page is running and shows purchase links. Server gates check entitlement on each protected action.
+
+Fixed-date promo keys
+- Format: PROBE-PROMO-P-<NNNN>-<YYYYMMDD>-<base32 signature>.
+- Ed25519 uses the existing gift public key, signing exactly linda-probe-promo|P|<NNNN>|<YYYYMMDD>. Gift signatures sign linda-probe-gift|P|<NNNN>, so neither signature works in the other format.
+- Promos grant Personal, kind promo, offline. expires_at is the exclusive midnight UTC immediately after the signed date; the UI shows the inclusive signed date. Expired valid promos raise expired_key from check_key/activate. Malformed or invalidly signed gift/promo keys raise wrong_product before any Polar request.
+- Promo expiry is re-derived from the signed key when reading a cached entitlement. A modified cached date does not extend it. Cached promo rollback fails closed and cannot be cleared by local revalidation.
+- Gift keys remain perpetual/offline; purchased-key validation and Polar activation counters remain on their existing path. Offline promos, like gifts, have no online activation/device counter.
+
+Owner CLI (do not ship)
+python tools/probe_license_admin.py promo --count 100 --date 20261231 --start 1 --output <new CSV path>
+The command loads the existing gift signing PEM using signing_key(), shared with provision. It never provisions Polar resources or creates/replaces the signing key. --private-key <path> can select a temporary test key. Dates/ranges are validated before loading a key; IDs are 0000 through 9999. Output is UTF-8 BOM CSV and must not already exist. Never distribute the signing PEM.
+
+Installer boundary
+installer/ProbeLicenseCheck.exe is rebuilt for 1.4.10 from the current licensing source. The helper checks signed gifts and temporary promos offline before the purchased-key path. Release evidence and native acceptance limitations are recorded in work/release_1410/RELEASE_REPORT.md.
+
+Limits and policy follow-up
+This is a local trial, not a tamper-proof service: a user can modify the app, delete both markers, restore a VM/OS snapshot or manipulate unobserved clock time. DPAPI binds storage to the Windows account, not to a trusted clock. Separate Windows accounts/machine IDs have separate trials; packaged registry virtualization can separate Store and Inno marker views. The lock serializes one process, not multiple independently running copies. A failed write after recording use may consume the trial without granting it.
+
+The 1.4.10 legal and pricing wording grants active trials and promos the same rights as Personal until expiry. See work/release_1410/LEGAL_CHANGES.md for all replacement sentences and the status of external copies.
