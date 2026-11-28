@@ -100,13 +100,34 @@ def _cmd_find(args: argparse.Namespace) -> int:
 
 
 def _cmd_index(args: argparse.Namespace) -> int:
+    import localdocs_settings
     from project_search.backend import index_project
 
     folder = str(Path(args.folder).resolve())
     if not os.path.isdir(folder):
         print(f"error: folder not found: {folder}", file=sys.stderr)
         return 1
-    res = index_project(folder, max_files=args.max_files, max_chunks=args.max_chunks)
+
+    prev_env = os.environ.get("LOCALDOCS_OCR_WHEN")
+    prev_force = localdocs_settings.FORCE_OCR.is_set()
+    try:
+        if getattr(args, "ocr", False):
+            os.environ["LOCALDOCS_OCR_WHEN"] = "index"
+            localdocs_settings.FORCE_OCR.set()
+        elif getattr(args, "no_ocr", False):
+            os.environ["LOCALDOCS_OCR_WHEN"] = "never"
+            localdocs_settings.FORCE_OCR.clear()
+        res = index_project(folder, max_files=args.max_files, max_chunks=args.max_chunks)
+    finally:
+        if prev_env is None:
+            os.environ.pop("LOCALDOCS_OCR_WHEN", None)
+        else:
+            os.environ["LOCALDOCS_OCR_WHEN"] = prev_env
+        if prev_force:
+            localdocs_settings.FORCE_OCR.set()
+        else:
+            localdocs_settings.FORCE_OCR.clear()
+
     if args.format == "json":
         _print_json(res)
     else:
@@ -336,6 +357,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_idx.add_argument("folder", help="Folder path")
     p_idx.add_argument("--max-files", type=int, default=10000)
     p_idx.add_argument("--max-chunks", type=int, default=30000)
+    ocr_grp = p_idx.add_mutually_exclusive_group()
+    ocr_grp.add_argument("--ocr", action="store_true", help="Run OCR on images and scanned PDFs during indexing")
+    ocr_grp.add_argument("--no-ocr", action="store_true", help="Skip OCR during indexing")
     p_idx.set_defaults(func=_cmd_index)
 
     # search

@@ -124,6 +124,79 @@ class TestLindaProbeCLI(unittest.TestCase):
         r = self.run_cli("index", str(self.tmp_dir / "nonexistent_dir"))
         self.assertNotEqual(r.returncode, 0)
 
+    def test_docx_and_zip_index_search(self) -> None:
+        import zipfile
+
+        docx_path = self.docs_dir / "contract_sample.docx"
+        with zipfile.ZipFile(docx_path, "w") as zf:
+            zf.writestr(
+                "[Content_Types].xml",
+                '<?xml version="1.0" encoding="UTF-8"?>'
+                '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+                '<Default Extension="xml" ContentType="application/xml"/>'
+                '<Override PartName="/word/document.xml" '
+                'ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>'
+                "</Types>",
+            )
+            zf.writestr(
+                "word/document.xml",
+                '<?xml version="1.0" encoding="UTF-8"?>'
+                '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+                "<w:body><w:p><w:r><w:t>UniqueDocxToken7741 confidentiality clause.</w:t></w:r></w:p></w:body>"
+                "</w:document>",
+            )
+
+        zip_path = self.docs_dir / "archive_bundle.zip"
+        with zipfile.ZipFile(zip_path, "w") as zf:
+            zf.writestr("nested/secret_note.txt", "UniqueZipToken8852 quarterly budget report.")
+
+        ri = self.run_cli("index", str(self.docs_dir), "--format", "json")
+        self.assertEqual(ri.returncode, 0, ri.stderr)
+
+        r_docx = self.run_cli("search", str(self.docs_dir), "UniqueDocxToken7741", "--format", "json")
+        self.assertEqual(r_docx.returncode, 0, r_docx.stderr)
+        self.assertIn("contract_sample.docx", r_docx.stdout)
+
+        r_zip = self.run_cli("search", str(self.docs_dir), "UniqueZipToken8852", "--format", "json")
+        self.assertEqual(r_zip.returncode, 0, r_zip.stderr)
+        self.assertIn("archive_bundle.zip", r_zip.stdout)
+
+    def test_ocr_and_image_index_search(self) -> None:
+        import shutil
+        from PIL import Image, ImageDraw, ImageFont
+
+        has_tesseract = bool(
+            shutil.which("tesseract")
+            or Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe").is_file()
+        )
+        if not has_tesseract:
+            try:
+                import rapidocr_onnxruntime  # noqa: F401
+            except ImportError:
+                self.skipTest("Neither tesseract nor rapidocr_onnxruntime is installed")
+
+        img_path = self.docs_dir / "invoice_scan.png"
+        img = Image.new("RGB", (900, 220), "white")
+        draw = ImageDraw.Draw(img)
+        try:
+            font = ImageFont.truetype(r"C:\Windows\Fonts\arial.ttf", 44)
+        except Exception:
+            font = ImageFont.load_default()
+        draw.text((30, 50), "INVOICE 9931 WARSAW", fill="black", font=font)
+        draw.text((30, 120), "TOTAL AMOUNT 4200 PLN", fill="black", font=font)
+        img.save(img_path)
+
+        ro = self.run_cli("ocr", str(img_path), "--lang", "eng", "--format", "json")
+        self.assertEqual(ro.returncode, 0, ro.stderr)
+        self.assertIn("9931", ro.stdout)
+
+        ri = self.run_cli("index", str(self.docs_dir), "--ocr", "--format", "json")
+        self.assertEqual(ri.returncode, 0, ri.stderr)
+
+        rs = self.run_cli("search", str(self.docs_dir), "WARSAW", "--format", "json")
+        self.assertEqual(rs.returncode, 0, rs.stderr)
+        self.assertIn("invoice_scan.png", rs.stdout, f"index={ri.stdout}, search={rs.stdout}")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -29,9 +29,15 @@ def _index_locked(folder, should_stop=None):
             for p, rel in B.files(root):
                 if should_stop and should_stop():
                     return dict(report, partial=True, stopped=True)
-                if p.suffix.lower() in B._IMG_EXT: continue
+                if p.suffix.lower() in B._IMG_EXT:
+                    import localdocs_settings as _ls
+                    if not _ls.ocr_during_index():
+                        continue
                 try:
-                    if p.suffix.lower() == '.pdf':
+                    if p.suffix.lower() in B._IMG_EXT:
+                        from project_search.extractors import extract
+                        pages = [(1, extract(p) or '')]
+                    elif p.suffix.lower() == '.pdf':
                         from pypdf import PdfReader
                         pages = [(i + 1, pg.extract_text() or '') for i, pg in enumerate(PdfReader(str(p)).pages)]
                         report['needs_ocr'] += sum(not text.strip() for _, text in pages)

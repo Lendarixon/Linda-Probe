@@ -116,21 +116,24 @@ def _extract_docx_body(path):
     extracted by design; callers report this policy instead of inventing
     Word page numbers (page identity stays 1).
     """
-    import docx
-    from docx.oxml.ns import qn
-    doc = docx.Document(str(path))
-    body = doc.element.body
     blocks = []
-    for child in body.iterchildren():
-        if child.tag == qn("w:p"):
-            t = _docx_paragraph_text(child, qn)
-            if t.strip():
-                blocks.append(t.strip())
-        elif child.tag == qn("w:tbl"):
-            t = _docx_table_text(child, qn)
-            if t.strip():
-                blocks.append(t)
     warnings = ["body-only:headers-footers-footnotes-not-extracted"]
+    try:
+        import docx
+        from docx.oxml.ns import qn
+        doc = docx.Document(str(path))
+        body = doc.element.body
+        for child in body.iterchildren():
+            if child.tag == qn("w:p"):
+                t = _docx_paragraph_text(child, qn)
+                if t.strip():
+                    blocks.append(t.strip())
+            elif child.tag == qn("w:tbl"):
+                t = _docx_table_text(child, qn)
+                if t.strip():
+                    blocks.append(t)
+    except ImportError:
+        warnings.append("stdlib-xml-fallback")
     # Fallback for documents where python-docx body iteration misses content
     # (e.g. structured document tags): raw w:p scan in document order.
     if not any(b.strip() for b in blocks):
