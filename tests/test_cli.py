@@ -161,41 +161,20 @@ class TestLindaProbeCLI(unittest.TestCase):
         self.assertEqual(r_zip.returncode, 0, r_zip.stderr)
         self.assertIn("archive_bundle.zip", r_zip.stdout)
 
-    def test_ocr_and_image_index_search(self) -> None:
-        import shutil
-        from PIL import Image, ImageDraw, ImageFont
-
-        has_tesseract = bool(
-            shutil.which("tesseract")
-            or Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe").is_file()
-        )
-        if not has_tesseract:
-            try:
-                import rapidocr_onnxruntime  # noqa: F401
-            except ImportError:
-                self.skipTest("Neither tesseract nor rapidocr_onnxruntime is installed")
+    def test_ocr_enforces_license_when_unlicensed(self) -> None:
+        from PIL import Image, ImageDraw
 
         img_path = self.docs_dir / "invoice_scan.png"
-        img = Image.new("RGB", (900, 220), "white")
-        draw = ImageDraw.Draw(img)
-        try:
-            font = ImageFont.truetype(r"C:\Windows\Fonts\arial.ttf", 44)
-        except Exception:
-            font = ImageFont.load_default()
-        draw.text((30, 50), "INVOICE 9931 WARSAW", fill="black", font=font)
-        draw.text((30, 120), "TOTAL AMOUNT 4200 PLN", fill="black", font=font)
+        img = Image.new("RGB", (400, 120), "white")
+        ImageDraw.Draw(img).text((20, 40), "INVOICE 9931", fill="black")
         img.save(img_path)
 
         ro = self.run_cli("ocr", str(img_path), "--lang", "eng", "--format", "json")
-        self.assertEqual(ro.returncode, 0, ro.stderr)
-        self.assertIn("9931", ro.stdout)
+        self.assertNotEqual(ro.returncode, 0)
+        self.assertIn("license_required", ro.stderr)
 
-        ri = self.run_cli("index", str(self.docs_dir), "--ocr", "--format", "json")
+        ri = self.run_cli("index", str(self.docs_dir), "--format", "json")
         self.assertEqual(ri.returncode, 0, ri.stderr)
-
-        rs = self.run_cli("search", str(self.docs_dir), "WARSAW", "--format", "json")
-        self.assertEqual(rs.returncode, 0, rs.stderr)
-        self.assertIn("invoice_scan.png", rs.stdout, f"index={ri.stdout}, search={rs.stdout}")
 
 
 if __name__ == "__main__":

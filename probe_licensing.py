@@ -227,23 +227,9 @@ def _entitled(st):
     if st.get('tier') == 'organization' and not expiry: return False
     return expiry is None or expiry > time.time()
 
-def _open_source_unlocked():
-    return os.environ.get('LINDA_PROBE_ENFORCE_LICENSE', '').strip().lower() not in ('1', 'true', 'yes')
-
-def _semantic_deps_available():
-    import importlib.util
-    return all(importlib.util.find_spec(p) is not None for p in ('torch', 'faiss', 'sentence_transformers'))
-
 def public_state():
     with LOCK:
         st = _load(); active = _entitled(st)
-        if not active and _open_source_unlocked():
-            sem_ok = _semantic_deps_available()
-            feats = {f: (sem_ok if f == 'semantic' else True) for f in FEATURES}
-            return {'licensed': True, 'edition': 'Open Source', 'tier': 'open_source',
-                'kind': 'open_source', 'status': 'open_source', 'key_hint': '',
-                'expires_at': None, 'days_left': 0, 'trial_available': False,
-                'features': feats, 'checkouts': config()['checkouts']}
         timed = st.get('kind') in ('trial', 'promo')
         if timed and st.get('status') == 'granted' and (_rollback(st) or (_expiry(st.get('expires_at')) or 0) <= time.time()):
             st['status'] = 'expired'
@@ -258,10 +244,6 @@ def public_state():
             'features': {f: active for f in FEATURES}, 'checkouts': config()['checkouts']}
 
 def allowed(feature):
-    if _open_source_unlocked():
-        if feature == 'semantic':
-            return _semantic_deps_available()
-        return True
     return feature not in FEATURES or public_state()['licensed']
 
 def check_key(key):

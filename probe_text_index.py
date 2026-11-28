@@ -31,7 +31,8 @@ def _index_locked(folder, should_stop=None):
                     return dict(report, partial=True, stopped=True)
                 if p.suffix.lower() in B._IMG_EXT:
                     import localdocs_settings as _ls
-                    if not _ls.ocr_during_index():
+                    import probe_licensing as _pl
+                    if not (_pl.allowed('ocr') and _ls.ocr_during_index()):
                         continue
                 try:
                     if p.suffix.lower() in B._IMG_EXT:
