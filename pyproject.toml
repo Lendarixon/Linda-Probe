@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linda-probe"
+version = "2.0.0"
+description = "Local Windows file search, offline OCR, and semantic/photo search"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-NC-4.0" }
+authors = [{ name = "Vladyslav Manzyuk", email = "lindapro.support@proton.me" }]
+dependencies = [
+  "numpy>=1.24",
+  "onnxruntime>=1.17",
+  "pillow>=10.0",
+  "pypdf>=4.0",
+  "python-docx>=1.0",
+  "openpyxl>=3.1",
+  "python-pptx>=0.6",
+  "huggingface-hub>=0.20",
+]
+
+[project.scripts]
+linda-probe = "linda_probe.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["linda_probe*", "project_search*"]

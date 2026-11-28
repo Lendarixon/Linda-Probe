@@ -1,0 +1,370 @@
+[
+  {
+    "id": "clip-multilingual-text",
+    "kind": "text_embed_clip",
+    "title": {
+      "ru": "Поиск фото на разных языках",
+      "en": "Find photos in many languages",
+      "pl": "Wyszukiwanie zdjęć w wielu językach"
+    },
+    "description": {
+      "ru": "Ищет фотографии по описанию на русском, польском, английском и других языках. Работает вместе с CLIP ViT-B/32.",
+      "en": "Finds photos from descriptions in Russian, Polish, English and other languages. Works with CLIP ViT-B/32.",
+      "pl": "Wyszukuje zdjęcia na podstawie opisów po polsku, rosyjsku, angielsku i w innych językach. Współpracuje z CLIP ViT-B/32."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "size_mb": 138.912778,
+    "size_estimated": false,
+    "source": "hf",
+    "repo": "sentence-transformers/clip-ViT-B-32-multilingual-v1",
+    "revision": "58edf8cada9e398793dca955574a48cbb7f18be2",
+    "files": [
+      {
+        "path": "onnx/model_quint8_avx2.onnx",
+        "url": "https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1/resolve/58edf8cada9e398793dca955574a48cbb7f18be2/onnx/model_quint8_avx2.onnx",
+        "sha256": "fbc8fbeaa5237d96bd1bf430057c70d34de8334a463e933a5faa305f6caeed9c",
+        "size": 135377779
+      },
+      {
+        "path": "tokenizer.json",
+        "url": "https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1/resolve/58edf8cada9e398793dca955574a48cbb7f18be2/tokenizer.json",
+        "sha256": "",
+        "size": 1961847
+      },
+      {
+        "path": "sentence_bert_config.json",
+        "url": "https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1/resolve/58edf8cada9e398793dca955574a48cbb7f18be2/sentence_bert_config.json",
+        "sha256": "",
+        "size": 53
+      },
+      {
+        "path": "2_Dense/config.json",
+        "url": "https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1/resolve/58edf8cada9e398793dca955574a48cbb7f18be2/2_Dense/config.json",
+        "sha256": "",
+        "size": 115
+      },
+      {
+        "path": "2_Dense/model.safetensors",
+        "url": "https://huggingface.co/sentence-transformers/clip-ViT-B-32-multilingual-v1/resolve/58edf8cada9e398793dca955574a48cbb7f18be2/2_Dense/model.safetensors",
+        "sha256": "d12568dc7300970a4d3dbb49068ad16cd89b99840b74b026f8e48071e9414f74",
+        "size": 1572984
+      }
+    ],
+    "default_for": [],
+    "device": [
+      "cpu"
+    ],
+    "verified": true,
+    "verification_notes": "CPU ru/en cosine=0.98764980; safetensors Dense loaded without torch; API sizes and revision recorded."
+  },
+  {
+    "id": "clip-vit-b32-en",
+    "kind": "image_embed",
+    "supported_kinds": [
+      "image_embed",
+      "text_embed_clip"
+    ],
+    "title": {
+      "ru": "CLIP ViT-B/32 английский (быстрая)",
+      "en": "CLIP ViT-B/32 English (fast)",
+      "pl": "CLIP ViT-B/32 angielski (szybki)"
+    },
+    "description": {
+      "ru": "Ищет фото по описанию словами (на английском) и по образцу. Работает на видеокарте и процессоре.",
+      "en": "Finds photos by a short description (English) or by example. Runs on GPU or CPU.",
+      "pl": "Wyszukuje zdjęcia po opisie (po angielsku) lub według wzoru. Działa na karcie graficznej i procesorze."
+    },
+    "license": "MIT",
+    "commercial_ok": true,
+    "size_mb": 460,
+    "size_estimated": true,
+    "source": "hf",
+    "repo": "Xenova/clip-vit-base-patch32",
+    "revision": "main",
+    "files": [
+      {
+        "path": "onnx/vision_model_quantized.onnx",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/onnx/vision_model_quantized.onnx",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "onnx/text_model_quantized.onnx",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/onnx/text_model_quantized.onnx",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "onnx/text_model_fp16.onnx",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/onnx/text_model_fp16.onnx",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "onnx/vision_model_fp16.onnx",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/onnx/vision_model_fp16.onnx",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "tokenizer.json",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/tokenizer.json",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "tokenizer_config.json",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/tokenizer_config.json",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "preprocessor_config.json",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/preprocessor_config.json",
+        "sha256": "",
+        "size": 520
+      },
+      {
+        "path": "config.json",
+        "url": "https://huggingface.co/Xenova/clip-vit-base-patch32/resolve/main/config.json",
+        "sha256": "",
+        "size": null
+      }
+    ],
+    "default_for": [
+      "image_embed",
+      "text_embed_clip"
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "verified": false,
+    "verification_notes": "quantized files run on CPU only (crash DirectML); fp16 files run on DirectML only (fail CPU optimizer): ImageSearch picks by device. Tested 2026-10-22 on ORT 1.24.4.",
+    "upstream": "https://huggingface.co/openai/clip-vit-base-patch32"
+  },
+  {
+    "id": "linda-ocr-own",
+    "kind": "ocr_rec",
+    "title": {
+      "ru": "Linda OCR (наша модель)",
+      "en": "Linda OCR (our model)",
+      "pl": "Linda OCR (nasz model)"
+    },
+    "description": {
+      "ru": "Наша модель распознавания текста. Входит в программу, скачивать не нужно.",
+      "en": "Our text recognition model. Included with the app, no download needed.",
+      "pl": "Nasz model rozpoznawania tekstu. Wbudowany w program, pobieranie niepotrzebne."
+    },
+    "license": "proprietary-own",
+    "commercial_ok": true,
+    "size_mb": 13,
+    "source": "bundled",
+    "repo": "",
+    "revision": "main",
+    "files": [
+      {
+        "path": "ocr_train/run_v1/model.onnx",
+        "url": "",
+        "sha256": "",
+        "size": null
+      },
+      {
+        "path": "ocr_train/data_v1/charset.txt",
+        "url": "",
+        "sha256": "",
+        "size": null
+      }
+    ],
+    "default_for": [
+      "ocr_rec"
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "verified": false,
+    "verification_notes": "Own-license exception explicitly requested. Files and rights supplied by application owner; not independently verified."
+  },
+  {
+    "id": "linda-ocr-hf",
+    "kind": "ocr_rec",
+    "supported_kinds": [
+      "ocr_rec"
+    ],
+    "title": {
+      "ru": "Linda OCR (обновляемая, с Hugging Face)",
+      "en": "Linda OCR (updatable, from Hugging Face)",
+      "pl": "Linda OCR (aktualizowany, z Hugging Face)"
+    },
+    "description": {
+      "ru": "Та же наша модель распознавания текста; скачивается по нажатию и обновляется, когда мы выкладываем новую версию.",
+      "en": "The same text recognition model; downloaded on request and updated when a new version is published.",
+      "pl": "Ten sam model rozpoznawania tekstu; pobierany na żądanie i aktualizowany po publikacji nowej wersji."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "size_mb": 5,
+    "source": "hf",
+    "repo": "Lindarixon/linda-ocr",
+    "revision": "main",
+    "files": [
+      {
+        "path": "model.onnx",
+        "url": "https://huggingface.co/Lindarixon/linda-ocr/resolve/main/model.onnx",
+        "sha256": "",
+        "size": 4365974
+      },
+      {
+        "path": "charset.txt",
+        "url": "https://huggingface.co/Lindarixon/linda-ocr/resolve/main/charset.txt",
+        "sha256": "",
+        "size": 491
+      }
+    ],
+    "default_for": [],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "verified": true,
+    "upstream": "https://huggingface.co/Lindarixon/linda-ocr"
+  },
+  {
+    "id": "rapid-detector",
+    "kind": "ocr_det",
+    "title": {
+      "en": "rapid-detector",
+      "ru": "rapid-detector",
+      "pl": "rapid-detector"
+    },
+    "description": {
+      "en": "Optional OCR model, downloaded after Probe Pro activation.",
+      "ru": "Дополнительная модель OCR. Скачивается после активации Probe Pro.",
+      "pl": "Dodatkowy model OCR. Pobierany po aktywacji Probe Pro."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "source": "hf",
+    "repo": "RapidAI/RapidOCR",
+    "internal": true,
+    "files": [
+      {
+        "path": "ch_PP-OCRv5_det_mobile.onnx",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/det/ch_PP-OCRv5_det_mobile.onnx",
+        "sha256": "4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae",
+        "size": null
+      }
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "size_mb": null,
+    "revision": "v3.10.0",
+    "default_for": []
+  },
+  {
+    "id": "rapid-rec-en",
+    "kind": "ocr_rec",
+    "title": {
+      "en": "rapid-rec-en",
+      "ru": "rapid-rec-en",
+      "pl": "rapid-rec-en"
+    },
+    "description": {
+      "en": "Optional OCR model, downloaded after Probe Pro activation.",
+      "ru": "Дополнительная модель OCR. Скачивается после активации Probe Pro.",
+      "pl": "Dodatkowy model OCR. Pobierany po aktywacji Probe Pro."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "source": "hf",
+    "repo": "RapidAI/RapidOCR",
+    "internal": true,
+    "files": [
+      {
+        "path": "en_PP-OCRv5_rec_mobile.onnx",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/en_PP-OCRv5_rec_mobile.onnx",
+        "sha256": "c3461add59bb4323ecba96a492ab75e06dda42467c9e3d0c18db5d1d21924be8",
+        "size": null
+      }
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "size_mb": null,
+    "revision": "v3.10.0",
+    "default_for": []
+  },
+  {
+    "id": "rapid-rec-latin",
+    "kind": "ocr_rec",
+    "title": {
+      "en": "rapid-rec-latin",
+      "ru": "rapid-rec-latin",
+      "pl": "rapid-rec-latin"
+    },
+    "description": {
+      "en": "Optional OCR model, downloaded after Probe Pro activation.",
+      "ru": "Дополнительная модель OCR. Скачивается после активации Probe Pro.",
+      "pl": "Dodatkowy model OCR. Pobierany po aktywacji Probe Pro."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "source": "hf",
+    "repo": "RapidAI/RapidOCR",
+    "internal": true,
+    "files": [
+      {
+        "path": "latin_PP-OCRv5_rec_mobile.onnx",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/latin_PP-OCRv5_rec_mobile.onnx",
+        "sha256": "b20bd37c168a570f583afbc8cd7925603890efbcdc000a59e22c269d160b5f5a",
+        "size": null
+      }
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "size_mb": null,
+    "revision": "v3.10.0",
+    "default_for": []
+  },
+  {
+    "id": "rapid-rec-cyrillic",
+    "kind": "ocr_rec",
+    "title": {
+      "en": "rapid-rec-cyrillic",
+      "ru": "rapid-rec-cyrillic",
+      "pl": "rapid-rec-cyrillic"
+    },
+    "description": {
+      "en": "Optional OCR model, downloaded after Probe Pro activation.",
+      "ru": "Дополнительная модель OCR. Скачивается после активации Probe Pro.",
+      "pl": "Dodatkowy model OCR. Pobierany po aktywacji Probe Pro."
+    },
+    "license": "Apache-2.0",
+    "commercial_ok": true,
+    "source": "hf",
+    "repo": "RapidAI/RapidOCR",
+    "internal": true,
+    "files": [
+      {
+        "path": "cyrillic_PP-OCRv5_rec_mobile.onnx",
+        "url": "https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/PP-OCRv5/rec/cyrillic_PP-OCRv5_rec_mobile.onnx",
+        "sha256": "90f761b4bfcce0c8c561c0cb5c887b0971d3ec01c32164bdf7374a35b0982711",
+        "size": null
+      }
+    ],
+    "device": [
+      "cpu",
+      "gpu"
+    ],
+    "size_mb": null,
+    "revision": "v3.10.0",
+    "default_for": []
+  }
+]

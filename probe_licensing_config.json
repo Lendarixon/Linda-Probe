@@ -1,0 +1,14 @@
+{
+  "organization_id": "696a6525-f56d-4863-8e63-d8afc1fd3902",
+  "benefits": {
+    "personal": "be5b51c2-a237-4846-8abd-644cb1162787",
+    "team": "3b1fb388-2080-44d9-a2be-03f5f74f5315",
+    "organization": "3112ebe5-f8c5-450a-8a23-18e06f498f7a"
+  },
+  "checkouts": {
+    "personal": "https://buy.polar.sh/polar_cl_ocKiMPEuNUcBaYd1VuznOqJG0Nba621QOuHgn3wqovL",
+    "team": "https://buy.polar.sh/polar_cl_f2kNSLkqbeCs4C1XVl2kNDPzXugLdBBEzE3FF3KzGvj",
+    "organization": "https://buy.polar.sh/polar_cl_9lYGni5ADbhnxtklKBjAj0WuwWPozXw3nTKwc3LMc4q"
+  },
+  "gift_public_key": "jHsLvwdolYmdH9NzhtnwrMQw25qkAD7AmgoEL51D9Dw="
+}

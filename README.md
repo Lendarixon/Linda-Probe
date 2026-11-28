@@ -2,7 +2,8 @@
 
 # Linda Probe — local Windows file search, offline OCR and photo search (English, Polish, Russian)
 
-Free for personal non-commercial use, **paid for Pro and commercial use** — one licence covers the app and its local OCR and semantic search workflows ([PROBE_LICENSING.md](legal/PROBE_LICENSING.md), [TERMS_AND_REFUND.md](legal/TERMS_AND_REFUND.md), contact lindapro.support@proton.me). Runs on your machine: no cloud uploads, no telemetry.
+Free for personal non-commercial use, **paid for Pro and commercial use** — one licence covers the app, the command-line tools, and the local OCR/search workflows ([LICENSING.md](LICENSING.md), [PROBE_LICENSING.md](legal/PROBE_LICENSING.md), contact lindapro.support@proton.me). Runs on your machine: no cloud uploads, no telemetry.
+Our OCR recognition model lives on Hugging Face: [Lindarixon/linda-ocr](https://huggingface.co/Lindarixon/linda-ocr) (Apache-2.0).
 
 ## Latest Windows update: 2.0.0
 
@@ -29,11 +30,28 @@ SHA-256 (`LindaProbe-Setup-2.0.0.exe`):
 
 Verify the SHA-256 hash before running the standalone installer. Because the standalone `.exe` installer is not yet code-signed, Windows SmartScreen may show a warning — after verifying the source and hash, select **More info -> Run anyway**. Optional AI semantic search and OCR models are downloaded after activation and require an internet connection, compatible hardware, and sufficient disk space.
 
+## Command line / Python
+
+Install locally in editable mode (`pip install -e .`) or run directly with Python 3.10+:
+
+```bash
+python -m linda_probe find "invoice" --root C:\Docs --format table
+python -m linda_probe index C:\Docs
+python -m linda_probe search C:\Docs "refund policy" --limit 5 --format md
+python -m linda_probe dupes C:\Docs --min-size 1024 --format json
+python -m linda_probe settings show
+python -m linda_probe models
+python -m linda_probe doctor
+python -m linda_probe serve --port 8798
+```
+
+All list/search commands support `--format table|json|csv|md`.
+
 ## Two editions: Free and Pro
 
 The same app, two capability levels. Neither edition has tariff limits on file count or processing speed.
 * **Free:** sub-50ms filename lookups, exact-word full-text search (SQLite FTS5), Windows 11-style file explorer, previews, export, citations, manual tags, and duplicate finder.
-* **Pro:** hybrid AI semantic search (FAISS + FTS5, including cross-language queries), offline OCR for scans and PDFs (RapidOCR / Tesseract), photo search by text description or example image, automatic local tags, and commercial use.
+* **Pro:** hybrid AI semantic search (FAISS + FTS5, including cross-language queries), offline OCR for scans and PDFs (RapidOCR / Tesseract / `linda-ocr`), photo search by text description or example image, automatic local tags, and commercial use.
 
 | Feature | Free | Pro |
 |---|---|---|
