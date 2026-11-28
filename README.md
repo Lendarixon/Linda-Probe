@@ -1,4 +1,4 @@
-<p align="center"><img src="images/readme_banner.svg" alt="Linda Probe — local Windows file search, offline OCR and photo search" width="100%"></p>
+<p align="center"><img src="docs/brand/readme_banner.png" alt="Linda Probe - local Windows file search, offline OCR and photo search" width="100%"></p>
 
 # Linda Probe — local Windows file search, offline OCR and photo search (English, Polish, Russian)
 
