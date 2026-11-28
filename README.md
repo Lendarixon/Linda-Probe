@@ -1,34 +1,39 @@
-![Linda Probe logo](images/logo.png)
+<p align="center"><img src="images/readme_banner.svg" alt="Linda Probe — local Windows file search, offline OCR and photo search" width="100%"></p>
 
-# Linda Probe — Instant Local File Search, Offline OCR & AI Photo Search for Windows
+# Linda Probe — local Windows file search, offline OCR and photo search (English, Polish, Russian)
 
-**Find any document, scanned PDF, or photo on your PC in milliseconds — 100% offline, zero telemetry, one-time purchase.**
+Free for personal non-commercial use, **paid for Pro and commercial use** — one licence covers the app and its local OCR and semantic search workflows ([PROBE_LICENSING.md](legal/PROBE_LICENSING.md), [TERMS_AND_REFUND.md](legal/TERMS_AND_REFUND.md), contact lindapro.support@proton.me). Runs on your machine: no cloud uploads, no telemetry.
 
-[**Get from Microsoft Store (Signed)**](https://apps.microsoft.com/detail/9PGM1V68193X) · [**Start 7-Day Pro Trial in App (No Card)**](#pricing) · [**Project Page**](https://lendarixon.github.io/Linda/probe.html?utm_source=github)
+## Latest Windows update: 2.0.0
 
----
+[Download the Windows release](https://github.com/Lendarixon/Linda-Probe/releases/tag/v2.0.0) · [Microsoft Store](https://apps.microsoft.com/detail/9PGM1V68193X) · [Project page](https://lendarixon.github.io/Linda/probe.html?utm_source=github)
 
-## Why Linda Probe 2.0?
+App **2.0.0** (Fluent 2.0 interface overhaul, `Ctrl+K` Command Palette, live suggestions and diagnostics):
+- **Modern Fluent 2.0 UI:** Dark and Light themes across English, Russian, and Polish.
+- **Command Palette (`Ctrl+K`):** jump directly to tabs, folders, recent searches, themes, and system diagnostics.
+- **Faster workflows:** live debounced filename suggestions as you type, incremental results rendering, export to CSV / Markdown / JSON, and 1-click Copy Citation (`filename + page + snippet`).
+- **Diagnostics & storefront:** built-in `/doctor` system diagnostics and a redesigned Pro & 7-day offline trial storefront with a status bar plan badge.
 
-Most desktop search tools either miss text inside scans and PDFs, or force you to upload private files to a cloud subscription. **Linda Probe** combines a native C# filename engine with hybrid AI semantic search, offline OCR, and local photo search — all running privately on your Windows PC.
+## Also from this project
 
-- **Instant Name & Exact Content Search (Free):** Sub-50ms filename lookups across millions of files plus exact-word full-text search, Windows 11-style file explorer, rich previews, and manual tags.
-- **Hybrid AI Semantic Search (Pro):** Search by meaning, not just exact keywords (including cross-language queries) powered by local FAISS + SQLite FTS5.
-- **Offline OCR for Scans & Images (Pro):** Automatically read scanned PDFs and images locally with RapidOCR / Tesseract — zero cloud uploads.
-- **AI Photo Search & Auto-Tags (Pro):** Find photos by text description or by dropping an example image, plus automatic local tagging.
-- **Built for Speed & Power Users (New in 2.0):**
-  - **Modern Fluent 2.0 UI** in Dark and Light themes (interface available in English, Russian, and Polish).
-  - **Command Palette (`Ctrl+K`)** to jump to folders, tabs, recent searches, themes, and diagnostics.
-  - **Live Instant Filename Suggestions** as you type, **Export Results** (CSV / Markdown / JSON), and **1-Click Copy Citation** (`filename + page + snippet`).
-  - **Built-in System Diagnostics** and a redesigned Pro storefront with a **7-day offline Pro trial**.
+[Linda](https://github.com/Lendarixon/Linda) is a local detector of AI-generated text for English, Polish, and Russian, with built-in **Humanizer** and **Trace** (writing-style comparison). Both apps run entirely on your PC.
 
-> **100% Private by Design:** Your documents never leave your device. No telemetry, no usage tracking, no crash uploads, no forced cloud account.
+## Windows app
 
----
+Get it from the [Microsoft Store](https://apps.microsoft.com/detail/9PGM1V68193X) (recommended, signed), or download **LindaProbe-Setup-2.0.0.exe** from the [releases page](https://github.com/Lendarixon/Linda-Probe/releases/download/v2.0.0/LindaProbe-Setup-2.0.0.exe) (Windows 10/11 x64).
 
-## Free vs Pro
+SHA-256 (`LindaProbe-Setup-2.0.0.exe`):
+```text
+2d4f7fd304e78dc424fb30c4e1a07bf411f99f644f47cd77b24fa61be5cc97bf
+```
 
-Neither edition has tariff limits on file count or processing speed.
+Verify the SHA-256 hash before running the standalone installer. Because the standalone `.exe` installer is not yet code-signed, Windows SmartScreen may show a warning — after verifying the source and hash, select **More info -> Run anyway**. Optional AI semantic search and OCR models are downloaded after activation and require an internet connection, compatible hardware, and sufficient disk space.
+
+## Two editions: Free and Pro
+
+The same app, two capability levels. Neither edition has tariff limits on file count or processing speed.
+* **Free:** sub-50ms filename lookups, exact-word full-text search (SQLite FTS5), Windows 11-style file explorer, previews, export, citations, manual tags, and duplicate finder.
+* **Pro:** hybrid AI semantic search (FAISS + FTS5, including cross-language queries), offline OCR for scans and PDFs (RapidOCR / Tesseract), photo search by text description or example image, automatic local tags, and commercial use.
 
 | Feature | Free | Pro |
 |---|---|---|
@@ -41,59 +46,28 @@ Neither edition has tariff limits on file count or processing speed.
 | Automatic local tags | — | Yes |
 | Commercial / workplace use | — | Yes |
 
----
-
-## Pricing & 7-Day Free Trial
-
-Try every Pro feature risk-free: start a **7-day Pro trial** directly inside the app with one click — **offline, no credit card, no automatic subscription**. When the trial or a temporary promo expires, the app cleanly returns to Free while keeping all your documents, indexes, and downloaded models.
+## Commercial licence and pricing
 
 | Pro Licence | Price | Users & Devices | Updates |
 |---|---|---|---|
 | [**Personal**](https://buy.polar.sh/polar_cl_ocKiMPEuNUcBaYd1VuznOqJG0Nba621QOuHgn3wqovL) | **USD 10** once | 1 named user, up to 3 devices | Purchased version & fixes perpetually |
-| [**Team**](https://buy.polar.sh/polar_cl_f2kNSLkqbeCs4C1XVl2kNDPzXugLdBBEzE3FF3KzGvj) *(Best Value)* | **USD 30** once | Up to 10 named users, up to 20 devices | Purchased version & fixes perpetually |
+| [**Team**](https://buy.polar.sh/polar_cl_f2kNSLkqbeCs4C1XVl2kNDPzXugLdBBEzE3FF3KzGvj) | **USD 30** once | Up to 10 named users, up to 20 devices | Purchased version & fixes perpetually |
 | [**Organization**](https://buy.polar.sh/polar_cl_9lYGni5ADbhnxtklKBjAj0WuwWPozXw3nTKwc3LMc4q) | **USD 500**/year | 1 organization at 1 site, up to 200 devices | All updates during paid year |
 
-- **14-Day Full Refund:** Request a full refund within 14 days of purchase via [lindapro.support@proton.me](mailto:lindapro.support@proton.me) or Polar. Mandatory consumer rights remain unaffected.
-- **Merchant of Record:** Polar processes checkout, tax, and invoicing (final total shown before payment). Operator: Vladyslav Manzyuk, Poland.
-- *Personal/Team:* Perpetual for the purchased major version and its fixes; new major versions or models may require a paid upgrade. *Organization:* Renews yearly until cancelled in the Polar customer portal; after expiry, Pro rights end and Free features remain available.
+- **14-day full refund:** via [lindapro.support@proton.me](mailto:lindapro.support@proton.me) or Polar. Mandatory consumer rights remain unaffected.
+- **Merchant of Record:** Polar processes checkout, tax, and invoicing. Operator: Vladyslav Manzyuk, Poland.
+- *Personal/Team:* perpetual for the purchased major version and its fixes; new major versions or models may require a paid upgrade. *Organization:* renews yearly until cancelled in the Polar customer portal; after expiry, Pro rights end and Free features remain available.
 
----
+## Activation, trials & privacy
 
-## Download & Installation
+- **Zero document uploads:** indexing, search, OCR, and photo recognition run locally on your machine.
+- **7-day Pro trial & promo keys (offline):** start a 7-day trial in the app or enter a temporary promo key (`PROBE-PROMO-...`). Both work offline, send nothing to Polar, and grant Personal Pro rights through the displayed UTC expiry date (inclusive). One trial is available per Windows user and machine; Windows DPAPI protects the machine-bound local access cache, and a local marker in the user data folder plus `HKCU\Software\LindaProbe` record trial usage solely to prevent repeat trials.
+- **Purchased keys (online activation):** enter your Probe key in Settings -> Licence (Linda detector keys do not unlock Probe). Polar receives the key and a Probe-specific hashed machine ID (never document contents). Click **Remove key** while online before moving devices to release a slot.
+- **Gift keys:** signed Ed25519 perpetual Personal vouchers verified completely offline.
+- **Licence model:** personal, non-commercial use of Free features is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use and Pro features require a paid/gift key, active trial, or active promo.
 
-- **Recommended (Signed):** [**Install from Microsoft Store**](https://apps.microsoft.com/detail/9PGM1V68193X)
-- **Standalone Windows x64 Installer (Windows x64 — 2.0.0):** [**Download LindaProbe-Setup-2.0.0.exe**](https://github.com/Lendarixon/Linda-Probe/releases/download/v2.0.0/LindaProbe-Setup-2.0.0.exe)
-
-SHA-256 (`LindaProbe-Setup-2.0.0.exe`):
-```text
-2d4f7fd304e78dc424fb30c4e1a07bf411f99f644f47cd77b24fa61be5cc97bf
-```
-
-Verify the SHA-256 hash before running the standalone installer. Because the standalone `.exe` installer is not yet code-signed, Windows SmartScreen may show a warning — after verifying the source and hash, select **More info -> Run anyway**.
-
-**System Requirements:** Windows 10/11 x64. Optional AI semantic search and OCR models are downloaded after activation and require an internet connection, compatible hardware, and sufficient disk space.
-
----
-
-## Activation, Trials & Promo Keys
-
-- **7-Day Pro Trial & Promo Keys (Offline):** Start a 7-day trial in the app or enter a temporary promo key (`PROBE-PROMO-...`). Both work offline, require no network connection, send nothing to Polar, and grant Personal Pro rights (including commercial use for 1 person on up to 3 devices) through the displayed UTC expiry date (inclusive). One trial is available per Windows user and machine; removing a key does not restart or restore it.
-  - *Transparency note:* Windows DPAPI protects the machine-bound local access cache. A local marker in the user data folder and a registry marker under `HKCU\Software\LindaProbe` record trial usage solely to prevent repeat trials on the same user/machine. Uninstalling retains the data folder unless you choose to delete indexes and models (which removes the file marker, while the `HKCU` marker remains). Microsoft Store and installer builds may keep separate markers.
-- **Purchased Keys (Online Activation):** Enter your Probe key in Settings -> Licence (Linda detector keys do not unlock Probe). Polar receives the key and a Probe-specific hashed machine ID (never document contents). Perpetual keys continue working offline when validation cannot reach the network; Organization keys expire at the cached end of the paid term. Confirmed revocations lock Pro on the next successful check. Before uninstalling or moving a device, click **Remove key** while online to release your device slot (3/20/200).
-- **Gift Keys:** Signed Ed25519 perpetual Personal vouchers verified completely offline (no server-side device counter).
-
----
-
-## Privacy & Licensing
-
-- **Zero Document Uploads:** Indexing, search, OCR, and photo recognition run locally on your machine.
-- **Minimal Network Calls:** Only purchased-key activation/validation (Polar) and optional post-activation model downloads (Hugging Face, which sees your IP address like any download) use the network.
-- **Licence Model:** Personal, non-commercial use of Linda Probe's free features (no key) is licensed under [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/legalcode). Commercial use (paid work or clients, use inside a company, school, or organization, or in a product/service you sell) and all Pro features require a paid or gift licence key, an active trial, or an active temporary promo.
-
-### Legal Documents & Support
+## Legal documents and support
 
 [Privacy Policy](legal/PRIVACY_POLICY.md) · [Terms & Refund](legal/TERMS_AND_REFUND.md) · [Third-Party Notices](legal/THIRD_PARTY_NOTICES.md) · [EULA](legal/EULA.txt) · [Licence Spec](legal/PROBE_LICENSING.md)
-
-Third-party components and model weights retain their own licences; Pro licenses the Linda Probe application workflow, not exclusive ownership of third-party models.
 
 **Support & Refunds:** [lindapro.support@proton.me](mailto:lindapro.support@proton.me)
